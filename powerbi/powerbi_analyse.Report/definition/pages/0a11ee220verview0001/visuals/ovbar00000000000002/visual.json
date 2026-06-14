@@ -186,6 +186,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "eb484460e0b459bbebd8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "regions"
+              }
+            },
+            "Property": "Deaths per 100k (Confirmed)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

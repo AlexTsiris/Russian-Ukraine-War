@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "patitle000000",
+  "name": "c06dcac2b29c986c8c9a",
   "position": {
-    "x": 39.887274068609372,
-    "y": 48.348210992253783,
-    "z": 13000,
-    "height": 64.061379564736256,
-    "width": 1200.2443378827002
+    "x": 0,
+    "y": 0,
+    "z": 4,
+    "height": 4,
+    "width": 1280,
+    "tabOrder": 4
   },
   "visual": {
     "visualType": "textbox",
@@ -18,11 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "What One Kilometre Costs",
+                    "value": "",
                     "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "32pt",
-                      "color": "#ffffff"
+                      "fontSize": "1pt"
                     }
                   }
                 ]
@@ -34,19 +33,6 @@
     },
     "visualContainerObjects": {
       "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
         {
           "properties": {
             "show": {
@@ -79,6 +65,37 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D04949'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

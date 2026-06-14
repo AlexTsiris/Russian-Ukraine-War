@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["casualties","regions","settlements","frontline_history","equipment_by_month","equipment_by_type","equipment_losses","equipment_crosscheck","equipment_meta"]
+annotation PBI_QueryOrder = ["casualties","regions","settlements","frontline_history","equipment_by_month","equipment_by_type","equipment_losses","equipment_crosscheck","equipment_meta","strategic_strikes"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -23,6 +23,7 @@ ref table equipment_losses
 ref table equipment_crosscheck
 ref table equipment_meta
 ref table Calendar
+ref table strategic_strikes
 
 ref cultureInfo ru-RU
 

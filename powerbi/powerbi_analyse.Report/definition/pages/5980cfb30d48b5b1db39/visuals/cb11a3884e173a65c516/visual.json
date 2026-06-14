@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "2794c5f380e8c6dd75d4",
+  "name": "cb11a3884e173a65c516",
   "position": {
-    "x": 427.88166728144597,
-    "y": 588.63946883068979,
-    "z": 10000,
-    "height": 91.861600885282186,
-    "width": 812.24994466986357,
-    "tabOrder": 10000
+    "x": 973.95612420763587,
+    "y": 370.91695147956648,
+    "z": 7,
+    "height": 92.130984722343939,
+    "width": 293.14404229836708,
+    "tabOrder": 7
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,20 +22,23 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "frontline_history"
+                          "Entity": "Calendar"
                         }
                       },
-                      "Property": "snapshot_date"
+                      "Property": "YearMonth"
                     }
                   },
                   "Function": 3
                 }
               },
-              "queryRef": "Min(frontline_history.snapshot_date)",
-              "nativeQueryRef": "First snapshot_date"
+              "queryRef": "Min(Calendar.YearMonth)",
+              "nativeQueryRef": "First YearMonth"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -129,6 +132,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
@@ -293,28 +307,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "eb8409c524a354001dd2",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "frontline_history"
-                  }
-                },
-                "Property": "snapshot_date"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -51,7 +51,7 @@ table equipment_meta
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\equipment_meta.csv"),[Delimiter=",", Columns=5, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/AlexTsiris/Russian-Ukraine-War/main/powerbi/equipment_meta.csv"),[Delimiter=",", Columns=5, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"attribution", type text}, {"warspotting_total", Int64.Type}, {"oryx_total", Int64.Type}, {"destroyed", Int64.Type}, {"updated_through", type date}})
 				in

@@ -12,29 +12,6 @@
     "visualType": "azureMap",
     "query": {
       "queryState": {
-        "Size": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "settlements"
-                        }
-                      },
-                      "Property": "deaths"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(settlements.deaths)",
-              "nativeQueryRef": "deaths"
-            }
-          ]
-        },
         "X": {
           "projections": [
             {
@@ -108,21 +85,21 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "1.75D"
+                  "Value": "1.61D"
                 }
               }
             },
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "64.8989930044178D"
+                  "Value": "61.06052837657856D"
                 }
               }
             },
             "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "101.30162406507338D"
+                  "Value": "93.54445086695205D"
                 }
               }
             },

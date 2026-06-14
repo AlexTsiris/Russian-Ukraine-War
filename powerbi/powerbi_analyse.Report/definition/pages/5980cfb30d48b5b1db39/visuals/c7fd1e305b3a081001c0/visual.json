@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "c7fd1e305b3a081001c0",
+  "position": {
+    "x": 972.75961791254053,
+    "y": 162.7248561329711,
+    "z": 13,
+    "height": 196.22703239564163,
+    "width": 293.14404229836708,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "strategic_strikes"
+                    }
+                  },
+                  "Property": "target_type"
+                }
+              },
+              "queryRef": "strategic_strikes.target_type",
+              "nativeQueryRef": "target_type"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "270.9314488998826D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "strategic_strikes.target_type"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

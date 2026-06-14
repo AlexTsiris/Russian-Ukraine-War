@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "957c03542a3e8e2b21b1",
+  "name": "824b49c301070b0c03c1",
   "position": {
-    "x": 39.887274068609372,
-    "y": 541.4999631132423,
-    "z": 9000,
-    "height": 139.00110660272961,
-    "width": 372.28122464035414,
-    "tabOrder": 9000
+    "x": 15.554581836239885,
+    "y": 577.9125405310665,
+    "z": 6,
+    "height": 98.113516197820815,
+    "width": 458.26191102152893,
+    "tabOrder": 6
   },
   "visual": {
     "visualType": "PBI_CV_16948668_E17D_454B_8664_2F2C470EA8C1",
@@ -20,67 +20,24 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "frontline_history"
+                      "Entity": "Calendar"
                     }
                   },
-                  "Property": "snapshot_date_dt"
+                  "Property": "YearMonth"
                 }
               },
-              "queryRef": "frontline_history.snapshot_date_dt",
-              "nativeQueryRef": "snapshot_date_dt",
-              "active": true,
-              "format": "dd-MM-yyyy"
+              "queryRef": "Calendar.YearMonth",
+              "nativeQueryRef": "YearMonth",
+              "active": true
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "frontline_history"
-                  }
-                },
-                "Property": "snapshot_date_dt"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "transitionSettings": [
-        {
-          "properties": {
-            "timeInterval": {
-              "expr": {
-                "Literal": {
-                  "Value": "750L"
-                }
-              }
-            },
-            "loop": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "autoStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "colorSelector": [
         {
           "properties": {
@@ -95,8 +52,14 @@
                   }
                 }
               }
-            },
-            "showAll": {
+            }
+          }
+        }
+      ],
+      "captionSettings": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -106,39 +69,13 @@
           }
         }
       ],
-      "captionSettings": [
+      "transitionSettings": [
         {
           "properties": {
-            "fontSize": {
+            "timeInterval": {
               "expr": {
                 "Literal": {
-                  "Value": "8L"
-                }
-              }
-            },
-            "captionColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "align": {
-              "expr": {
-                "Literal": {
-                  "Value": "'right'"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "4000L"
                 }
               }
             }
@@ -147,19 +84,6 @@
       ]
     },
     "visualContainerObjects": {
-      "lockAspect": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
@@ -179,29 +103,29 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b7e4aad59cd6da99e539",
+        "name": "9b3fb011b4588db0e0a4",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "frontline_history"
+                "Entity": "Calendar"
               }
             },
-            "Property": "snapshot_date_dt"
+            "Property": "YearMonth"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "170bc0197586150367a0",
+        "name": "836af9fe05072502430c",
         "field": {
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "frontline_history"
+                "Entity": "strategic_strikes"
               }
             },
-            "Property": "occipied_km2_measure"
+            "Property": "Total Strikes"
           }
         },
         "type": "Advanced",
@@ -209,8 +133,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "f",
-              "Entity": "frontline_history",
+              "Name": "s",
+              "Entity": "strategic_strikes",
               "Type": 0
             }
           ],
@@ -223,10 +147,10 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Source": "f"
+                          "Source": "s"
                         }
                       },
-                      "Property": "occipied_km2_measure"
+                      "Property": "Total Strikes"
                     }
                   },
                   "Right": {

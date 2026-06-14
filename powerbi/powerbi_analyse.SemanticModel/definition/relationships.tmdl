@@ -22,3 +22,11 @@ relationship 'Связь 3'
 	fromColumn: frontline_history.snapshot_date_dt
 	toColumn: Calendar.Date
 
+relationship 'Связь 4'
+	fromColumn: strategic_strikes.date
+	toColumn: Calendar.Date
+
+relationship 'Связь 5'
+	fromColumn: equipment_by_month.month
+	toColumn: Calendar.Date
+

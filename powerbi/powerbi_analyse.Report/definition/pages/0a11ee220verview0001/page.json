@@ -9,7 +9,12 @@
     {
       "source": "ovbar00000000000001",
       "target": "ovbar00000000000002",
-      "type": "HighlightFilter"
+      "type": "DataFilter"
+    },
+    {
+      "source": "ovbar00000000000002",
+      "target": "ovbar00000000000001",
+      "type": "DataFilter"
     }
   ]
 }

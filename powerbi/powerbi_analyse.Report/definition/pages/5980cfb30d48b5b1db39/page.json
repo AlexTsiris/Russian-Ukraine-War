@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "5980cfb30d48b5b1db39",
+  "displayName": "Strategic Strikes Inside Russia",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "824b49c301070b0c03c1",
+      "target": "9b731e634010b0bb6035",
+      "type": "NoFilter"
+    },
+    {
+      "source": "824b49c301070b0c03c1",
+      "target": "5bde8fd5746713567b4b",
+      "type": "NoFilter"
+    }
+  ]
+}

@@ -149,7 +149,7 @@ table regions
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\regions.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/AlexTsiris/Russian-Ukraine-War/main/powerbi/regions.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"region_en", type text}, {"region_ru", type text}, {"settlements", Int64.Type}, {"total_deaths_full", Int64.Type}})
 				in

@@ -1,0 +1,174 @@
+table strategic_strikes
+	lineageTag: a93f5d5b-9f08-45b2-b51d-4f680ca85874
+
+	/// Total strategic strikes in the current filter context.
+	measure 'Total Strikes' = COUNTROWS ( strategic_strikes )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: af91b5d5-2509-42d4-9ab7-cde0697baa05
+
+	/// Strikes confirmed by Ukrainian officials or two independent sources.
+	measure 'Confirmed Strikes' = CALCULATE ( [Total Strikes], strategic_strikes[status] = "confirmed" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: 6ef716cc-fc62-48ca-92ed-41ce07235bed
+
+	measure 'Claimed Strikes' = CALCULATE ( [Total Strikes], strategic_strikes[status] = "claimed" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: fac075bb-0e6e-487f-b001-8feb259158bf
+
+	measure '% Confirmed' = DIVIDE ( [Confirmed Strikes], [Total Strikes] )
+		formatString: 0.0%
+		displayFolder: 05 Strikes
+		lineageTag: a49037b3-b6a5-4f90-a510-81e187f1c135
+
+	measure 'Refinery Strikes' = CALCULATE ( [Total Strikes], strategic_strikes[target_type] = "refinery" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: cee45783-b6a5-4eec-b093-e1980a193e85
+
+	measure 'Airfield Strikes' = CALCULATE ( [Total Strikes], strategic_strikes[target_type] = "airfield" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: d5493a41-55c6-4d0c-867c-040530f69348
+
+	measure 'Oil Depot Strikes' = CALCULATE ( [Total Strikes], strategic_strikes[target_type] = "oil_depot" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: 4e3e8739-7ca5-4450-93ed-2f96c2242adb
+
+	measure 'Energy Strikes' = CALCULATE ( [Total Strikes], strategic_strikes[target_type] = "energy" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: 5d3d8db8-dd9b-493a-a11b-fdf5d5183002
+
+	measure 'Ammo Depot Strikes' = CALCULATE ( [Total Strikes], strategic_strikes[target_type] = "ammo_depot" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: d4a2d6f9-1e17-40bf-b32c-65c6595d47aa
+
+	/// Number of distinct refineries struck (cross-check vs '24 of 33').
+	measure 'Distinct Refineries Hit' = CALCULATE ( DISTINCTCOUNT ( strategic_strikes[target_name] ), strategic_strikes[target_type] = "refinery" )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: 3c4ae752-4c90-4c7c-a309-dc870efefd2b
+
+	/// Strikes with reliable coordinates (shown on the map).
+	measure 'Mapped Strikes' = CALCULATE ( [Total Strikes], NOT ( ISBLANK ( strategic_strikes[lat] ) ) )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: 21817f41-23b4-4321-bb81-b86a2765e131
+
+	measure 'Last Strike Date' = MAX ( strategic_strikes[date] )
+		formatString: yyyy-mm-dd
+		displayFolder: 05 Strikes
+		lineageTag: 34860a40-01b2-4027-b460-0d6a50ab07e0
+
+	measure 'Days Since Last Strike' = DATEDIFF ( [Last Strike Date], TODAY (), DAY )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: bb7bdca3-7237-4a11-b8bd-daa4f4a5ed4b
+
+	/// Running total of strikes over the Calendar axis.
+	measure 'Strikes Cumulative' = CALCULATE ( [Total Strikes], FILTER ( ALL ( 'Calendar' ), 'Calendar'[Date] <= MAX ( 'Calendar'[Date] ) ) )
+		formatString: #,0
+		displayFolder: 05 Strikes
+		lineageTag: c5395d9f-0ccf-473e-917d-5fc3dc5c18d2
+
+	measure 'Strikes MoM %' = VAR Cur = [Total Strikes] VAR Prev = CALCULATE ( [Total Strikes], DATEADD ( 'Calendar'[Date], -1, MONTH ) ) RETURN DIVIDE ( Cur - Prev, Prev )
+		formatString: 0.0%
+		displayFolder: 05 Strikes
+		lineageTag: 19359366-eeeb-4ce6-bcdc-aacf94b1bec8
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 327bbbc9-05ba-445d-b1ad-f6364a813d6f
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column target_name
+		dataType: string
+		lineageTag: 80552b83-ec7a-49bc-9997-a056675baacb
+		summarizeBy: none
+		sourceColumn: target_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column target_type
+		dataType: string
+		lineageTag: 2bedf2f4-dba4-4af1-b83f-7822e5f2ea15
+		summarizeBy: none
+		sourceColumn: target_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column oblast
+		dataType: string
+		lineageTag: 1c14e8b7-d2d7-4923-af59-f972e36a1479
+		summarizeBy: none
+		sourceColumn: oblast
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: double
+		lineageTag: ebfdac70-0c10-43d6-9938-e4df67b54e22
+		summarizeBy: sum
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lon
+		dataType: double
+		lineageTag: c68d42be-28e3-489a-a408-d586ac8683d6
+		summarizeBy: sum
+		sourceColumn: lon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column geo_precision
+		dataType: string
+		lineageTag: 31d297a9-a42c-4e72-bf77-67d0b16b173b
+		summarizeBy: none
+		sourceColumn: geo_precision
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 988e503a-0522-4f3b-a43b-1db35593e754
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_url
+		dataType: string
+		lineageTag: d092af67-10a8-496f-8e33-b9a626b0f2a5
+		summarizeBy: none
+		sourceColumn: source_url
+
+		annotation SummarizationSetBy = Automatic
+
+	partition strategic_strikes = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/AlexTsiris/Russian-Ukraine-War/main/powerbi/strategic_strikes.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"date", type date}, {"target_name", type text}, {"target_type", type text}, {"oblast", type text}, {"lat", type number}, {"lon", type number}, {"geo_precision", type text}, {"status", type text}, {"source_url", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -80,7 +80,7 @@ table settlements
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\settlements.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/AlexTsiris/Russian-Ukraine-War/main/powerbi/settlements.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"region_en", type text}, {"region_ru", type text}, {"settlement_type", type text}, {"settlement_en", type text}, {"settlement_ru", type text}, {"lat", type text}, {"lon", type text}, {"deaths", Int64.Type}, {"district_ru", type text}})
 				in

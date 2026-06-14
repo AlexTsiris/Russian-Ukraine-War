@@ -68,7 +68,7 @@ table equipment_losses
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\equipment_losses.csv"),[Delimiter=",", Columns=7, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/AlexTsiris/Russian-Ukraine-War/main/powerbi/equipment_losses.csv"),[Delimiter=",", Columns=7, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"date", type date}, {"type", type text}, {"status", type text}, {"model", type text}, {"oblast", type text}, {"lat", type number}, {"lon", type number}})
 				in

@@ -79,7 +79,7 @@ table casualties
 		lineageTag: 1ecd1998-f68e-4f3d-b400-3ddc76e992b3
 
 	/// Confirmed deaths per day since 24 Feb 2022 (dynamic).
-	measure 'Deaths per Day' = VAR d1 = MIN ( casualties[death_date] ) VAR d2 = MAX ( casualties[death_date] ) VAR days = DATEDIFF ( d1, d2, DAY ) + 1 RETURN DIVIDE ( [Total Confirmed Deaths], days )
+	measure 'Deaths per Day' = VAR d1 = MIN ( casualties[death_date] ) VAR d2 = MAX ( casualties[death_date] ) VAR days = DATEDIFF ( d1, d2, DAY ) + 1 VAR dated = COUNTROWS ( FILTER ( casualties, NOT ISBLANK ( casualties[death_date] ) ) ) RETURN DIVIDE ( dated, days )
 		formatString: #,0
 		displayFolder: 06 Context
 		lineageTag: a1000001-0001-0001-0001-000000000001
@@ -135,43 +135,11 @@ table casualties
 		displayFolder: 07 Cost of Advance
 		lineageTag: a74ac654-d6bd-46e1-8dbc-bdc17b5605c4
 
-	column uid
-		dataType: string
-		lineageTag: 2b885ee8-8e35-4bff-9835-bac96eef5fcc
-		summarizeBy: none
-		sourceColumn: uid
-
-		annotation SummarizationSetBy = Automatic
-
-	column name_en
-		dataType: string
-		lineageTag: 02792d34-d916-4ae1-a278-c4eaca20789b
-		summarizeBy: none
-		sourceColumn: name_en
-
-		annotation SummarizationSetBy = Automatic
-
-	column name_ru
-		dataType: string
-		lineageTag: 048424e0-fdf0-4d66-9389-a0a124cd6c44
-		summarizeBy: none
-		sourceColumn: name_ru
-
-		annotation SummarizationSetBy = Automatic
-
 	column region_en
 		dataType: string
 		lineageTag: 633d8100-7fbc-475d-be7e-ee3559681ec7
 		summarizeBy: none
 		sourceColumn: region_en
-
-		annotation SummarizationSetBy = Automatic
-
-	column region_ru
-		dataType: string
-		lineageTag: d6f72a17-ca87-4d8b-a00d-f91f3bcc2bb3
-		summarizeBy: none
-		sourceColumn: region_ru
 
 		annotation SummarizationSetBy = Automatic
 
@@ -183,35 +151,11 @@ table casualties
 
 		annotation SummarizationSetBy = Automatic
 
-	column branch_ru
-		dataType: string
-		lineageTag: 231f3f0c-f7ac-4bf2-86c4-bb5686c7f8ac
-		summarizeBy: none
-		sourceColumn: branch_ru
-
-		annotation SummarizationSetBy = Automatic
-
-	column rank_en
-		dataType: string
-		lineageTag: c124ec6a-68e0-49e7-9012-06db803353ea
-		summarizeBy: none
-		sourceColumn: rank_en
-
-		annotation SummarizationSetBy = Automatic
-
 	column rank_category
 		dataType: string
 		lineageTag: e3882b2a-fcfc-4bf8-82d2-21053c6e5fbf
 		summarizeBy: none
 		sourceColumn: rank_category
-
-		annotation SummarizationSetBy = Automatic
-
-	column rank_ru
-		dataType: string
-		lineageTag: f1268702-959d-4e1b-b5fd-13cc7ad2a8e1
-		summarizeBy: none
-		sourceColumn: rank_ru
 
 		annotation SummarizationSetBy = Automatic
 
@@ -224,17 +168,6 @@ table casualties
 
 		annotation SummarizationSetBy = Automatic
 
-	column birth_date
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: 76bebf6b-9ad7-411d-bddf-8231a80593d1
-		summarizeBy: none
-		sourceColumn: birth_date
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column death_date
 		dataType: dateTime
 		formatString: Long Date
@@ -245,56 +178,6 @@ table casualties
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
-
-	column death_year
-		dataType: int64
-		formatString: 0
-		lineageTag: 135dde6f-1b49-48bb-9f58-cc718f87dca5
-		summarizeBy: sum
-		sourceColumn: death_year
-
-		annotation SummarizationSetBy = Automatic
-
-	column death_month
-		dataType: int64
-		formatString: 0
-		lineageTag: baef3879-4438-4bb0-b5d0-7d1fd9f7de1b
-		summarizeBy: sum
-		sourceColumn: death_month
-
-		annotation SummarizationSetBy = Automatic
-
-	column death_month_name
-		dataType: string
-		lineageTag: 07cabde9-5b52-4223-85d8-41f18cf1afc1
-		summarizeBy: none
-		sourceColumn: death_month_name
-
-		annotation SummarizationSetBy = Automatic
-
-	column city_en
-		dataType: string
-		lineageTag: 6c7ca08a-f9c3-4efc-9a6e-84a5f73fe718
-		summarizeBy: none
-		sourceColumn: city_en
-
-		annotation SummarizationSetBy = Automatic
-
-	column city_ru
-		dataType: string
-		lineageTag: 3641413a-a3a9-4bb9-a5f0-a0869223edac
-		summarizeBy: none
-		sourceColumn: city_ru
-
-		annotation SummarizationSetBy = Automatic
-
-	column source_url
-		dataType: string
-		lineageTag: 73245d3d-5003-48e4-955a-4eb91f8d845a
-		summarizeBy: none
-		sourceColumn: source_url
-
-		annotation SummarizationSetBy = Automatic
 
 	column death_month_start = IF ( NOT ISBLANK ( casualties[death_date] ), DATE ( YEAR ( casualties[death_date] ), MONTH ( casualties[death_date] ), 1 ) )
 		dataType: dateTime
@@ -353,13 +236,12 @@ table casualties
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\casualties.csv"),[Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/AlexTsiris/Russian-Ukraine-War/main/powerbi/casualties.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"uid", type text}, {"name_en", type text}, {"name_ru", type text}, {"region_en", type text}, {"region_ru", type text}, {"branch_en", type text}, {"branch_ru", type text}, {"rank_en", type text}, {"rank_category", type text}, {"rank_ru", type text}, {"age", Int64.Type}, {"birth_date", type date}, {"death_date", type date}, {"death_year", Int64.Type}, {"death_month", Int64.Type}, {"death_month_name", type text}, {"city_en", type text}, {"city_ru", type text}, {"source_url", type text}}),
-				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type", {{"birth_date", null}}),
-				    #"Replaced Errors1" = Table.ReplaceErrorValues(#"Replaced Errors", {{"death_date", null}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"region_en", type text}, {"branch_en", type text}, {"rank_category", type text}, {"age", Int64.Type}, {"death_date", type date}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type", {{"death_date", null}})
 				in
-				    #"Replaced Errors1"
+				    #"Replaced Errors"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -42,7 +42,7 @@ table frontline_history
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\frontline_history.csv"),[Delimiter=",", Columns=3, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/AlexTsiris/Russian-Ukraine-War/main/powerbi/frontline_history.csv"),[Delimiter=",", Columns=3, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"snapshot_date", type text}, {"occupied_km2", Int64.Type}, {"wkt", type text}})
 				in

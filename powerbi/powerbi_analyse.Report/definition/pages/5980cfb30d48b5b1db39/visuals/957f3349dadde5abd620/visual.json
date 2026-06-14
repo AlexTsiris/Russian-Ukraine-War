@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "2794c5f380e8c6dd75d4",
+  "name": "957f3349dadde5abd620",
   "position": {
-    "x": 427.88166728144597,
-    "y": 588.63946883068979,
-    "z": 10000,
-    "height": 91.861600885282186,
-    "width": 812.24994466986357,
-    "tabOrder": 10000
+    "x": 14.762015464268675,
+    "y": 163.174262551945,
+    "z": 8,
+    "height": 93.756795422031473,
+    "width": 233.27583622862593,
+    "tabOrder": 8
   },
   "visual": {
     "visualType": "cardVisual",
@@ -17,25 +17,38 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "frontline_history"
-                        }
-                      },
-                      "Property": "snapshot_date"
+                    "SourceRef": {
+                      "Entity": "strategic_strikes"
                     }
                   },
-                  "Function": 3
+                  "Property": "Total Strikes"
                 }
               },
-              "queryRef": "Min(frontline_history.snapshot_date)",
-              "nativeQueryRef": "First snapshot_date"
+              "queryRef": "strategic_strikes.Total Strikes",
+              "nativeQueryRef": "Total Strikes"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "strategic_strikes"
+                  }
+                },
+                "Property": "Total Strikes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -122,7 +135,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "22D"
+                  "Value": "24D"
                 }
               }
             }
@@ -140,7 +153,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Date'"
+                  "Value": "'Total Strikes'"
                 }
               }
             },
@@ -293,28 +306,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "eb8409c524a354001dd2",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "frontline_history"
-                  }
-                },
-                "Property": "snapshot_date"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "patitle000000",
+  "name": "5291b78866c3c70d0aa9",
   "position": {
-    "x": 39.887274068609372,
-    "y": 48.348210992253783,
-    "z": 13000,
-    "height": 64.061379564736256,
-    "width": 1200.2443378827002
+    "x": 0,
+    "y": 689.782137747803,
+    "z": 0,
+    "height": 30.1361128142244,
+    "width": 1255.67136725935,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -18,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "What One Kilometre Costs",
+                    "value": "Source: \"Attacks in Russia during the Russian invasion of Ukraine\", Wikipedia (CC BY-SA 4.0). Cross-checked against published tallies (Baker Institute, United24, Kyiv Independent). Educational, non-commercial use.",
                     "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "32pt",
-                      "color": "#ffffff"
+                      "fontFamily": "monospace",
+                      "fontSize": "11.7px",
+                      "color": "#8c8c8c"
                     }
                   }
                 ]

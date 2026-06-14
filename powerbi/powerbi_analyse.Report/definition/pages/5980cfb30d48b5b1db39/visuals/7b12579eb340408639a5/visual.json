@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "416b0ecd25b86de3471c",
+  "name": "7b12579eb340408639a5",
   "position": {
-    "x": 261.43167961032776,
-    "y": 163.174262551945,
-    "z": 12000,
-    "height": 391.76946658491721,
-    "width": 697.59520403297222,
-    "tabOrder": 12000
+    "x": 260.83837233079191,
+    "y": 162.7248561329711,
+    "z": 12,
+    "height": 403.22262144714165,
+    "width": 698.7596763356994,
+    "tabOrder": 12
   },
   "visual": {
     "visualType": "azureMap",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "equipment_losses"
+                      "Entity": "strategic_strikes"
                     }
                   },
-                  "Property": "type"
+                  "Property": "target_type"
                 }
               },
-              "queryRef": "equipment_losses.type",
-              "nativeQueryRef": "type"
+              "queryRef": "strategic_strikes.target_type",
+              "nativeQueryRef": "target_type"
             }
           ]
         },
@@ -38,14 +38,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "casualties"
+                      "Entity": "strategic_strikes"
                     }
                   },
-                  "Property": "Equipment Losses (Confirmed)"
+                  "Property": "Total Strikes"
                 }
               },
-              "queryRef": "casualties.Equipment Losses (Confirmed)",
-              "nativeQueryRef": "Equipment Losses (Confirmed)"
+              "queryRef": "strategic_strikes.Total Strikes",
+              "nativeQueryRef": "Total Strikes"
             }
           ]
         },
@@ -56,13 +56,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "equipment_losses"
+                      "Entity": "strategic_strikes"
                     }
                   },
                   "Property": "lon"
                 }
               },
-              "queryRef": "equipment_losses.lon",
+              "queryRef": "Avg(strategic_strikes.lon)",
               "nativeQueryRef": "lon"
             }
           ]
@@ -74,13 +74,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "equipment_losses"
+                      "Entity": "strategic_strikes"
                     }
                   },
                   "Property": "lat"
                 }
               },
-              "queryRef": "equipment_losses.lat",
+              "queryRef": "Avg(strategic_strikes.lat)",
               "nativeQueryRef": "lat"
             }
           ]
@@ -115,21 +115,21 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "1.96D"
+                  "Value": "4.3D"
                 }
               }
             },
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "58.19452086402478D"
+                  "Value": "52.01677230661613D"
                 }
               }
             },
             "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "65.97870850000001D"
+                  "Value": "41.61749999999998D"
                 }
               }
             },
@@ -172,6 +172,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

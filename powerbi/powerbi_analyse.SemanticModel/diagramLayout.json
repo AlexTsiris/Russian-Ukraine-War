@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1095.8604300995462,
-        "y": 187.01671723000578
+        "x": 685.76554315511692,
+        "y": 0
       },
       "nodes": [
         {
@@ -150,10 +150,23 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2015.5033543448628,
+            "y": 287.97014490452295
+          },
+          "nodeIndex": "strategic_strikes",
+          "nodeLineageTag": "a93f5d5b-9f08-45b2-b51d-4f680ca85874",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Все таблицы",
-      "zoomValue": 112.1169364140609,
+      "zoomValue": 56.447393005378068,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
