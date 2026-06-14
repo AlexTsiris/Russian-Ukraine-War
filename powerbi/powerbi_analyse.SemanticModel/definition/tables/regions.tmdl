@@ -1,0 +1,161 @@
+table regions
+	lineageTag: ce0f68b5-e20a-43e2-ac33-eb314b108355
+
+	/// Total population of regions in context (Rosstat).
+	measure 'Region Population' = SUM ( regions[Population] )
+		formatString: #,0
+		displayFolder: 04 Geography
+		lineageTag: ef244dfb-fb59-47f8-b186-ddae333fe98a
+
+	/// Confirmed deaths per 100,000 residents (authoritative regional totals).
+	measure 'Deaths per 100k (Confirmed)' = DIVIDE ( SUM ( regions[total_deaths_full] ), SUM ( regions[Population] ) ) * 100000
+		formatString: 0.0
+		displayFolder: 04 Geography
+		lineageTag: b701924b-0fdd-44e8-9e80-be1c6eb9a691
+
+	/// Authoritative confirmed deaths by home region (full geography).
+	measure 'Regional Deaths (Confirmed)' = SUM ( regions[total_deaths_full] )
+		formatString: #,0
+		displayFolder: 04 Geography
+		lineageTag: f6632ea1-99f1-46d7-a1a0-58330cc43e9a
+
+	column region_en
+		dataType: string
+		lineageTag: 6ff2948b-475f-4841-b8f3-c3bda1f14dc6
+		summarizeBy: none
+		sourceColumn: region_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_ru
+		dataType: string
+		lineageTag: 590b2e82-e5f1-4ccc-96fa-ef985c526ac9
+		summarizeBy: none
+		sourceColumn: region_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column settlements
+		dataType: int64
+		formatString: 0
+		lineageTag: 0732c6e9-2a8c-4d75-a161-1e69554ee219
+		summarizeBy: none
+		sourceColumn: settlements
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_deaths_full
+		dataType: int64
+		formatString: 0
+		lineageTag: 39c77d8d-1e70-46d6-a41b-43ba1dc6afc6
+		summarizeBy: none
+		sourceColumn: total_deaths_full
+
+		annotation SummarizationSetBy = Automatic
+
+	column Population =
+			SWITCH ( regions[region_ru],
+			    "Москва", 13258262,
+			    "Санкт-Петербург", 5645943,
+			    "Московская область", 8766594,
+			    "Ростовская область", 4135018,
+			    "Свердловская область", 4218204,
+			    "Челябинская область", 3383188,
+			    "Самарская область", 3108944,
+			    "Нижегородская область", 3037816,
+			    "Новосибирская область", 2784587,
+			    "Кемеровская область", 2526384,
+			    "Волгоградская область", 2435355,
+			    "Саратовская область", 2368387,
+			    "Иркутская область", 2316571,
+			    "Воронежская область", 2259610,
+			    "Ленинградская область", 2057708,
+			    "Оренбургская область", 1815655,
+			    "Омская область", 1805443,
+			    "Тюменская область", 1625129,
+			    "Белгородская область", 1481098,
+			    "Тульская область", 1455911,
+			    "Владимирская область", 1295930,
+			    "Пензенская область", 1225984,
+			    "Тверская область", 1189685,
+			    "Ярославская область", 1179301,
+			    "Ульяновская область", 1164837,
+			    "Брянская область", 1132475,
+			    "Кировская область", 1120178,
+			    "Вологодская область", 1114639,
+			    "Липецкая область", 1107812,
+			    "Рязанская область", 1073981,
+			    "Калужская область", 1064747,
+			    "Курская область", 1050134,
+			    "Томская область", 1039458,
+			    "Калининградская область", 1033128,
+			    "Архангельская область", 947192,
+			    "Тамбовская область", 946010,
+			    "Астраханская область", 945991,
+			    "Ивановская область", 897869,
+			    "Смоленская область", 857847,
+			    "Амурская область", 750870,
+			    "Курганская область", 744197,
+			    "Орловская область", 685693,
+			    "Мурманская область", 650920,
+			    "Псковская область", 574199,
+			    "Новгородская область", 566745,
+			    "Костромская область", 560758,
+			    "Сахалинская область", 456792,
+			    "Краснодарский край", 5841846,
+			    "Ставропольский край", 2883494,
+			    "Красноярский край", 2837374,
+			    "Пермский край", 2482080,
+			    "Приморский край", 1798047,
+			    "Хабаровский край", 1273093,
+			    "Алтайский край", 2098979,
+			    "Забайкальский край", 982525,
+			    "Камчатский край", 287949,
+			    "Республика Башкортостан", 4046094,
+			    "Республика Татарстан", 4016571,
+			    "Республика Дагестан", 3258993,
+			    "Чеченская Республика", 1575819,
+			    "Удмуртская Республика", 1427018,
+			    "Республика Саха (Якутия)", 1007058,
+			    "Республика Бурятия", 970679,
+			    "Кабардино-Балкарская Республика", 908090,
+			    "Республика Мордовия", 758390,
+			    "Республика Коми", 714391,
+			    "Республика Северная Осетия-Алания", 678454,
+			    "Республика Марий Эл", 665983,
+			    "Республика Хакасия", 525451,
+			    "Республика Карелия", 518644,
+			    "Республика Карачаево-Черкесия", 468531,
+			    "Республика Тыва", 338341,
+			    "Республика Калмыкия", 267376,
+			    "Республика Алтай", 210099,
+			    "Ханты-Мансийский автономный округ - Югра", 1779510,
+			    "Ямало-Ненецкий автономный округ", 521655,
+			    "Чукотский автономный округ", 47902,
+			    "Ненецкий автономный округ", 41829,
+			    "Еврейская автономная область", 144389,
+			    "Магаданская область", 134202,
+			    "Чувашская Республика", 1184000,
+			    "Республика Адыгея", 498000,
+			    "Республика Ингушетия", 523000,
+			    "Республика Крым", 1934000,
+			    "Севастополь", 561000,
+			    "Байконур", 74000,
+			    BLANK () )
+		dataType: int64
+		lineageTag: 0d39b5e2-3a50-48da-ba38-78cc82bc7af8
+
+	partition regions = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\regions.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"region_en", type text}, {"region_ru", type text}, {"settlements", Int64.Type}, {"total_deaths_full", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "0a99equipment0000001",
+  "displayName": "Equipment",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "eqbar000000000001",
+      "target": "eqtrend0000000001",
+      "type": "DataFilter"
+    }
+  ]
+}

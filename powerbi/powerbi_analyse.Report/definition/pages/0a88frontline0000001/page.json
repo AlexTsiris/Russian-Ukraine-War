@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "0a88frontline0000001",
+  "displayName": "Frontline",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "957c03542a3e8e2b21b1",
+      "target": "cb918c2b0d55335c3285",
+      "type": "DataFilter"
+    }
+  ]
+}

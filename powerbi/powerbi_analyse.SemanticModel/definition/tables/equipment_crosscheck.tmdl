@@ -1,0 +1,41 @@
+table equipment_crosscheck
+	lineageTag: f5abff39-0cdc-4118-8f09-60ce774c3f4d
+
+	column category
+		dataType: string
+		lineageTag: 2861e829-6a42-4043-b942-5e0510f23f08
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column warspotting
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e575042-9364-4040-80a7-439f57c79f41
+		summarizeBy: sum
+		sourceColumn: warspotting
+
+		annotation SummarizationSetBy = Automatic
+
+	column oryx
+		dataType: int64
+		formatString: 0
+		lineageTag: 09037a19-0ee2-4a25-8aa4-7423922f3c54
+		summarizeBy: sum
+		sourceColumn: oryx
+
+		annotation SummarizationSetBy = Automatic
+
+	partition equipment_crosscheck = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\equipment_crosscheck.csv"),[Delimiter=",", Columns=3, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"category", type text}, {"warspotting", Int64.Type}, {"oryx", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

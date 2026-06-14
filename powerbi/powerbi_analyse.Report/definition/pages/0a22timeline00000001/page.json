@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "0a22timeline00000001",
+  "displayName": "Timeline",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "3a1cf7f200110c081065",
+      "target": "tlcard0000000000001",
+      "type": "DataFilter"
+    },
+    {
+      "source": "tlcard0000000000002",
+      "target": "tlcard0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tlcard0000000000003",
+      "target": "tlcard0000000000001",
+      "type": "NoFilter"
+    }
+  ]
+}

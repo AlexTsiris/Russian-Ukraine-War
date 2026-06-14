@@ -1,0 +1,84 @@
+date,target_name,target_type,oblast,lat,lon,geo_precision,status,source_url
+2023-07-02,Primorsko-Akhtarsk air base,airfield,Krasnodar Krai,45.07,39.05,facility,claimed,https://kyivindependent.com/explosion-reported-near-airfield-in-russias-krasnodar-region/
+2023-07-28,Kuibyshev oil refinery,refinery,Samara Oblast,53.16,50.07,facility,claimed,https://www.cnn.com/2023/07/28/europe/russia-taganrog-missile-strike-samara-intl/index.html
+2023-08-19,Soltsy air base,airfield,Novgorod Oblast,58.13889,30.32917,facility,confirmed,https://www.bbc.com/news/world-europe-66573842
+2023-08-21,Shaykovka military air base,airfield,Kaluga Oblast,54.22667,34.37167,facility,confirmed,https://www.reuters.com/world/europe/russia-destroys-ukrainian-drones-moscow-region-flights-disrupted-2023-08-21/
+2023-08-25,Tula Oblast airfield,airfield,Tula Oblast,54.0,37.6,oblast,claimed,https://kyivindependent.com/russia-claims-to-down-ukrainian-missile-as-explosions-reported-in-two-oblasts/
+2023-08-27,Kursk Oblast airfield,airfield,Kursk Oblast,51.7,36.2,oblast,confirmed,https://kyivindependent.com/media-sbu-confirms-drone-attack-in-russias-kursk-region/
+2023-08-30,Russia oil depot,oil_depot,,,,,confirmed,https://www.bbc.com/news/world-europe-66682503
+2023-09-01,Moscow Oblast airfield,airfield,Moscow Oblast,55.5,37.4,oblast,confirmed,https://www.bbc.com/news/world-europe-66682503
+2023-09-17,Russia oil depot,oil_depot,,,,,claimed,https://kyivindependent.com/governor-drone-damages-oil-depot-in-southwestern-russia/
+2023-09-18,Chkalovsky Air Base,airfield,,,,,confirmed,https://www.businessinsider.com/saboteurs-blew-up-aircraft-russian-military-base-cause-hysteria-ukraine-2023-9?amp
+2023-09-20,Russia refinery,refinery,,,,,claimed,https://www.aljazeera.com/news/2023/9/20/ukraine-oil-refinery-fire-sparked-by-drone-attack-russia-downs-four-uavs
+2023-09-24,Khalino air field,airfield,,51.75167,36.29667,facility,confirmed,https://www.themoscowtimes.com/2023/09/24/ukrainian-drone-strikes-russias-kursk-official-a82547
+2023-09-29,"Belaya, Kursk Oblast energy",energy,"Belaya, Kursk Oblast",52.91,103.07,facility,confirmed,https://www.aljazeera.com/news/2023/9/29/russian-power-substation-hit-in-latest-ukrainian-drone-wave-attack
+2023-10-01,Adler air base,airfield,,43.45,39.95667,facility,claimed,https://kyivindependent.com/media-drones-strike-sochi-smolensk/
+2023-10-18,Russia airfield,airfield,,,,,confirmed,https://kyivindependent.com/russian-defense-ministry-claims/
+2023-10-26,Russia energy,energy,,,,,claimed,https://kyivindependent.com/russia-claims-drone-attack-on-kursk-nuclear-power-plant/
+2023-10-29,Russia refinery,refinery,,,,,confirmed,https://www.reuters.com/world/europe/fire-afipsky-oil-refinery-russias-krasnodar-local-authorities-2023-10-29/
+2023-11-14,Tambov Oblast ammo depot,ammo_depot,Tambov Oblast,52.7,41.4,oblast,confirmed,https://kyivindependent.com/media-drone-damages-bryansk-explosives-plant/
+2024-01-03,Russia airfield,airfield,,,,,confirmed,https://www.forbes.com/sites/davidaxe/2024/01/04/a-ukrainian-saboteur-traveled-600-miles-to-a-snowy-russian-airfield-and-in-the-dead-of-night-lit-a-russian-sukhoi-fighter-bomber-on-fire/?sh=3453204c3d6e
+2024-01-09,Oryol Oblast oil depot,oil_depot,Oryol Oblast,52.9,36.3,oblast,confirmed,https://kyivindependent.com/drones-reportedly-hit-oil-depot-energy-facility-in-russias-oryol-region/
+2024-01-18,Novgorod Oblast oil depot,oil_depot,Novgorod Oblast,58.3,31.8,oblast,confirmed,https://www.themoscowtimes.com/2024/01/18/in-first-russia-downs-drone-over-st-petersburg-a83757
+2024-01-19,oil depot,oil_depot,Bryansk Oblast,52.75,32.23333,facility,confirmed,https://www.bbc.com/news/world-europe-68029235
+2024-01-21,Leningrad Oblast energy,energy,Leningrad Oblast,59.8,31.3,oblast,confirmed,https://www.reuters.com/world/fire-erupts-russias-novatek-baltic-sea-terminal-after-explosions-heard-2024-01-21/
+2024-01-25,Tuapse oil terminal,oil_depot,Krasnodar Krai,44.095,39.075,facility,claimed,https://kyivindependent.com/fire-breaks-out-at-oil-depot-in-russias-krasnodar-krai/
+2024-01-31,Russia refinery,refinery,,,,,confirmed,https://www.themoscowtimes.com/2024/01/31/drone-crashes-into-st-petersburg-oil-refinery-a83920
+2024-02-03,Volgograd refinery,refinery,Volgograd Oblast,48.62,44.47,facility,claimed,https://www.kyivpost.com/post/27558
+2024-02-09,Russia refinery,refinery,,,,,claimed,https://kyivindependent.com/russia-claims-it-destroyed-19-drones-over-4-regions-black-sea/
+2024-02-15,Russia refinery,refinery,,,,,confirmed,https://www.bbc.com/news/world-europe-68305049.amp
+2024-03-02,Russia oil depot,oil_depot,,,,,confirmed,https://www.reuters.com/world/europe/two-buildings-damaged-people-evacuated-after-incident-russias-st-petersburg-2024-03-02/
+2024-03-05,Russia oil depot,oil_depot,,,,,confirmed,https://kyivindependent.com/russia-claims-it-downed-drones-over-2-regions-amid-belgorod-oblasts-oil-depot-hit-reports/
+2024-03-10,Russia oil depot,oil_depot,,,,,confirmed,https://www.reuters.com/world/europe/woman-dies-ukraines-shelling-russias-kursk-governor-says-2024-03-10/
+2024-03-11,Nizhny Novgorod Oblast refinery,refinery,Nizhny Novgorod Oblast,56.2,44.0,oblast,confirmed,https://kyivindependent.com/russian-governor-claims-drone-hit-belgorod-administration-building/
+2024-03-13,Ryazan refinery,refinery,,54.58,39.78,facility,claimed,https://www.reuters.com/world/europe/ukraine-launches-drone-attacks-russia-second-night-row-officials-say-2024-03-13/
+2024-04-02,Tatarstan refinery,refinery,Tatarstan,55.4,50.9,oblast,confirmed,https://www.bbc.com/news/world-europe-68712158.amp
+2024-04-05,a military air base,airfield,Rostov Oblast,48.31,41.79,facility,confirmed,https://kyivindependent.com/russian-officials-report-massive-drone-attack-on-military-airfield-in-rostov-oblast/
+2024-04-26,Russia airfield,airfield,,,,,confirmed,https://kyivindependent.com/source-ukraine-destroys-russian-ka-32-helicopter-at-moscow-airfield/
+2024-04-27,Russia refinery,refinery,,,,,confirmed,https://www.forbes.com/sites/davidaxe/2024/05/01/russian-airmen-filled-a-shed-with-powerful-glide-bombs-soon-dozens-of-ukrainian-drones-swarmed-in/?sh=3158b8051b9a
+2024-05-09,Krasnodar refinery,refinery,Krasnodar,45.07,39.05,facility,claimed,https://kyivindependent.com/russia-claims-8-injured-in-air-strike-on-belgorod-oblast/
+2024-05-31,Russia oil depot,oil_depot,,,,,confirmed,https://kyivindependent.com/ukraine-strikes-ferry-crossing-oil-depot-in-russias-krasnodar-krai-general-staff-says/
+2024-06-06,Russia refinery,refinery,,,,,claimed,https://kyivindependent.com/explosions-oil-refinery-fire-reported-in-russias-rostov-oblast/
+2024-06-08,Akhtubinsk air base,airfield,,48.31,46.21,facility,confirmed,https://kyivindependent.com/yusov-ukrainian-operation-may-have-hit-2-su-57s-in-russia/
+2024-06-14,Russia refinery,refinery,,,,,confirmed,https://euromaidanpress.com/2024/06/15/at-least-two-russian-su-34-bombers-damaged-in-ukrainian-drone-attack-at-morozovsk-airfield/
+2024-06-20,Tambov Oblast refinery,refinery,Tambov Oblast,52.7,41.4,oblast,confirmed,https://www.ukrinform.net/rubric-ato/3876773-drones-attack-afipsky-oil-refinery-in-russias-krasnodar-region.html
+2024-06-21,Russia refinery,refinery,,,,,claimed,https://kyivindependent.com/russia-claims-several-casualties-after-reporting-mass-drone-attack-on-crimea-krasnodar/
+2024-06-25,Russia ammo depot,ammo_depot,,,,,confirmed,https://kyivindependent.com/ukraines-military-intelligence-says-it-detonated-ammunition-depot-in-russias-voronezh-oblast/
+2024-06-28,Russia oil depot,oil_depot,,,,,claimed,https://kyivindependent.com/drone-hits-oil-depot-in-tambov-oblast-russian-official-says/
+2024-07-09,Russia oil depot,oil_depot,,,,,confirmed,https://kyivindependent.com/russian-governors-claim-drone-attacks-caused-fire-at-substations-oil-depot-in-2-oblasts/
+2024-07-13,Russia oil depot,oil_depot,,,,,claimed,https://kyivindependent.com/drone-attack-caused-fire-at-oil-depot-in-rissias-rostov-oblast-governor-claims/
+2024-07-18,Russia airfield,airfield,,,,,claimed,https://mil.in.ua/en/news/resistance-movement-burns-military-equipment-at-an-airfield-in-russia/
+2024-07-20,Millerovo air base,airfield,,48.95,40.3,facility,claimed,https://www.pravda.com.ua/eng/news/2024/07/20/7466599/
+2024-07-27,Murmansk Oblast refinery,refinery,Murmansk Oblast,,,,confirmed,https://newsukraine.rbc.ua/news/two-tu-22m3-bombers-damaged-during-strike-1722360542.html
+2024-07-28,"Polevaya, Kursk Oblast refinery",refinery,"Polevaya, Kursk Oblast",,,,confirmed,https://kyivindependent.com/oil-refinery-on-fire-in-russias-kursk-obalst/
+2024-08-03,Morozovsk air base,airfield,,48.31,41.79,facility,confirmed,https://kyivindependent.com/drones-hit-warehouses-fuel-tanks-in-rostov-oblast-official-says/
+2024-08-08,Lipetsk air base,airfield,,52.635,39.445,facility,confirmed,https://www.nytimes.com/2024/08/15/world/europe/russia-ukraine-airfields-kursk.html
+2024-08-14,Savasleyka air base,airfield,Nizhny Novgorod Oblast,55.44,42.31,facility,claimed,https://www.dw.com/ru/minoborony-rf-utverzdaet-cto-nocu-nad-regionami-sbity-35-dronov-vsu/a-69911451
+2024-08-18,Russia oil depot,oil_depot,,,,,confirmed,https://www.themoscowtimes.com/2024/08/18/ukrainian-drones-spark-fuel-fire-in-south-russia-a86056
+2024-08-22,Marinovka air base,airfield,,48.65,43.79,facility,confirmed,https://newsukraine.rbc.ua/news/drone-attack-reported-in-volgograd-region-1724292764.html
+2024-08-26,Omsk refinery,refinery,,,,,claimed,https://www.themoscowtimes.com/2024/08/26/fire-breaks-out-at-gazprom-owned-oil-refinery-in-siberia-a86151
+2024-08-28,attacked,oil_depot,Rostov Oblast,48.52361,40.32083,facility,confirmed,https://kyivindependent.com/ukraines-military-confirms-strikes/
+2024-09-01,Moscow Refinery,refinery,Tver Oblast,,,,confirmed,https://www.reuters.com/world/europe/ukraine-launches-drones-moscow-other-regions-russian-officials-say-2024-08-31/
+2024-09-18,Russia ammo depot,ammo_depot,,,,,confirmed,https://www.bbc.com/news/articles/c30lp1qq6pzo
+2024-09-21,Tikhoretsk air base,airfield,"Oktyabrsky, Tver Oblast",,,,confirmed,https://english.nv.ua/nation/ukrainian-drones-attack-two-ammunition-depots-in-russia-including-one-storing-north-korean-missiles-50452659.html
+2024-10-03,Borisoglebsk air base,airfield,,51.36667,42.17833,facility,confirmed,https://euromaidanpress.com/2024/10/03/ukraine-targets-russias-guided-bomb-warehouses-and-aircraft-in-voronezh-oblast-airfield-attack/
+2024-10-10,Khanskaya air base,airfield,,,,,confirmed,https://kyivindependent.com/drones-hit-military-airfield-in-russias-republic-of-adygea-russian-media-claims/
+2024-11-09,Russia ammo depot,ammo_depot,,,,,confirmed,https://www.newsweek.com/russia-ukraine-tula-drones-enemy-1983238
+2024-11-14,Krymsk air base,airfield,Krasnodar Krai,45.07,39.05,facility,confirmed,https://english.nv.ua/nation/massive-drone-strike-targets-russian-air-base-in-krasnodar-krai-50466601.html
+2024-11-20,Kotovo#Novgorod Oblast ammo depot,ammo_depot,Kotovo#Novgorod Oblast,,,,confirmed,https://www.themoscowtimes.com/2024/11/20/village-in-northwestern-russia-evacuated-after-ukrainian-drones-attack-missile-depot-a87073
+2024-11-25,Russia oil depot,oil_depot,,,,,confirmed,
+2024-12-14,Russia oil depot,oil_depot,,,,,confirmed,https://newsukraine.rbc.ua/news/defense-forces-hit-large-oil-depot-in-oryol-1734167516.html
+2024-12-19,Russia refinery,refinery,,,,,confirmed,https://en.defence-ua.com/news/details_of_the_attack_on_novoshakhtinsk_oil_refinery_in_rostov_region_revealed_drones_and_neptune_missiles_were_used-12910.html
+2025-01-14,Russia refinery,refinery,,,,,claimed,https://english.nv.ua/nation/explosions-cripple-russian-supply-chain-blame-pinned-on-ukraine-50481382.html
+2025-01-17,Russia oil depot,oil_depot,,,,,confirmed,https://newsukraine.rbc.ua/news/drone-attack-on-oil-depot-in-russia-s-kaluga-1737148085.html
+2025-01-29,Kstovo refinery,refinery,,56.13,44.2,facility,claimed,
+2025-01-31,Volgograd refinery,refinery,,48.62,44.47,facility,confirmed,
+2025-06-01,Olenya air base,airfield,,68.15167,33.465,facility,confirmed,https://www.telegraph.co.uk/world-news/2025/06/01/russia-ukraine-zelensky-putin-war-latest-news5291/
+2025-08-08,Afipsky refinery,refinery,Krasnodar Krai,44.9,38.84,facility,confirmed,https://www.themoscowtimes.com/2025/08/07/ukrainian-drone-attack-sparks-fire-at-krasnodar-oil-refinery-a90122
+2025-08-14,Volgograd refinery,refinery,Volgograd Oblast,48.62,44.47,facility,confirmed,https://www.reuters.com/world/europe/russia-reports-fire-volgograd-refinery-after-ukrainian-drone-attack-2025-08-14/
+2025-08-21,Bryansk Oblast oil depot,oil_depot,Bryansk Oblast,52.9,33.5,oblast,claimed,https://www.reuters.com/business/energy/ukrainian-attack-suspends-russian-oil-flows-hungary-slovakia-2025-08-22
+2025-08-28,Kuibyshev refinery,refinery,Samara Oblast,53.16,50.07,facility,confirmed,https://www.reuters.com/business/energy/russias-kuibyshevsk-refinery-halted-operations-after-drone-attacks-sources-say-2025-08-29/
+2025-09-20,refineries,refinery,Samara Oblast,53.2,50.5,oblast,confirmed,https://www.bbc.com/news/articles/ce3253gxqvwo
+2025-09-28,power station,energy,,,,,claimed,https://kyivindependent.com/ukrainian-himars-reportedly-strike-thermal-power-plant-in-russias-belgorod-oblast/
+2025-10-04,Russia energy,energy,,,,,claimed,https://kyivindependent.com/ukraine-struck-russias-missile-ship-grad-in-karelia-military-says/
+2025-12-22,Russia oil depot,oil_depot,,,,,confirmed,https://it.euronews.com/2025/12/22/lucraina-colpisce-terminale-petrolifero-jet-e-navi-russe-in-unondata-di-attacchi

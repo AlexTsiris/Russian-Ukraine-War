@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "0aa0equipmap00000001",
+  "displayName": "Equipment Map",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "085f3570044a0ad4ecca",
+      "target": "e87f231eb09315409e07",
+      "type": "DataFilter"
+    },
+    {
+      "source": "085f3570044a0ad4ecca",
+      "target": "e176ef11670e00020105",
+      "type": "DataFilter"
+    },
+    {
+      "source": "085f3570044a0ad4ecca",
+      "target": "cd8b7d72380847a14ecc",
+      "type": "DataFilter"
+    },
+    {
+      "source": "085f3570044a0ad4ecca",
+      "target": "0dd89609be2062c0a22d",
+      "type": "DataFilter"
+    }
+  ]
+}

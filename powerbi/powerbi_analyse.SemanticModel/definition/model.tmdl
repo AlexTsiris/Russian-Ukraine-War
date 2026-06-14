@@ -1,0 +1,28 @@
+model Model
+	culture: ru-RU
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["casualties","regions","settlements","frontline_history","equipment_by_month","equipment_by_type","equipment_losses","equipment_crosscheck","equipment_meta"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table casualties
+ref table regions
+ref table settlements
+ref table conflict_context
+ref table frontline_history
+ref table equipment_by_month
+ref table equipment_by_type
+ref table equipment_losses
+ref table equipment_crosscheck
+ref table equipment_meta
+ref table Calendar
+
+ref cultureInfo ru-RU
+

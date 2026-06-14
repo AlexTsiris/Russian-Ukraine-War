@@ -1,0 +1,92 @@
+table settlements
+	lineageTag: 58e4804c-8ea6-436d-8324-02f9900d5a0c
+
+	column region_en
+		dataType: string
+		lineageTag: 3ed08d8f-102c-41c9-87c0-e9d49cac5224
+		summarizeBy: none
+		sourceColumn: region_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_ru
+		dataType: string
+		lineageTag: ed054602-7a0c-4bba-9c85-f9984a3e587b
+		summarizeBy: none
+		sourceColumn: region_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column settlement_type
+		dataType: string
+		lineageTag: 177728fc-6b8a-43fb-b74f-08edd79dd13c
+		summarizeBy: none
+		sourceColumn: settlement_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column settlement_en
+		dataType: string
+		lineageTag: 05bbd614-331e-4995-a11d-3c45d62a2433
+		summarizeBy: none
+		sourceColumn: settlement_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column settlement_ru
+		dataType: string
+		lineageTag: e26179f6-227a-489d-877f-024a52e86967
+		summarizeBy: none
+		sourceColumn: settlement_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: string
+		lineageTag: 7bdfeb99-e890-408a-9b1d-0fc8cc7faceb
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column lon
+		dataType: string
+		lineageTag: d451c116-1e3e-471c-a0bc-93ae86f3d365
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: lon
+
+		annotation SummarizationSetBy = Automatic
+
+	column deaths
+		dataType: int64
+		formatString: 0
+		lineageTag: ee0d4bc5-53a7-4425-bb9c-e267652c8369
+		summarizeBy: sum
+		sourceColumn: deaths
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_ru
+		dataType: string
+		lineageTag: fd8f3df0-a62a-4403-bb8f-953799423ff0
+		summarizeBy: none
+		sourceColumn: district_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	partition settlements = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\settlements.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"region_en", type text}, {"region_ru", type text}, {"settlement_type", type text}, {"settlement_en", type text}, {"settlement_ru", type text}, {"lat", type text}, {"lon", type text}, {"deaths", Int64.Type}, {"district_ru", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

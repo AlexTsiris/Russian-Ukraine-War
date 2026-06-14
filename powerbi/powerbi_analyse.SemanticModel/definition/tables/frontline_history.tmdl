@@ -1,0 +1,54 @@
+table frontline_history
+	lineageTag: 20f0971d-5257-49d6-9fdf-dca766ad1568
+
+	measure persent_occupaied_km = DIVIDE([occipied_km2_measure],603548, 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 85b37402-c340-4973-bf90-7ae641a417ba
+
+	measure occipied_km2_measure = MIN('frontline_history'[occupied_km2])
+		formatString: 0
+		lineageTag: c7a0adcf-f571-4ebf-ac2d-72c08349af35
+
+	column snapshot_date
+		dataType: string
+		lineageTag: 3055f64e-0e99-45da-b0e8-0d7eabbc0e70
+		summarizeBy: none
+		sourceColumn: snapshot_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column occupied_km2
+		dataType: int64
+		formatString: #,0
+		lineageTag: eb9f768d-7119-4715-8ba6-7257e94f6107
+		summarizeBy: none
+		sourceColumn: occupied_km2
+
+		annotation SummarizationSetBy = Automatic
+
+	column wkt
+		dataType: string
+		lineageTag: 6da4584e-59f6-48c1-b2c5-97c17e856526
+		summarizeBy: none
+		sourceColumn: wkt
+
+		annotation SummarizationSetBy = Automatic
+
+	column snapshot_date_dt = DATEVALUE ( frontline_history[snapshot_date] )
+		dataType: dateTime
+		lineageTag: 55243bde-89c4-4202-9100-51d7cd69981c
+
+	partition frontline_history = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\frontline_history.csv"),[Delimiter=",", Columns=3, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"snapshot_date", type text}, {"occupied_km2", Int64.Type}, {"wkt", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

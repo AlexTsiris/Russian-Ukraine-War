@@ -1,0 +1,84 @@
+table equipment_by_type
+	lineageTag: d4aebfe0-9aa9-4a43-96bc-d73133a90877
+
+	measure 'Destroyed (Confirmed)' = CALCULATE ( COUNTROWS ( equipment_losses ), equipment_losses[status] = "Destroyed" )
+		formatString: 0
+		lineageTag: a1dcff17-1728-486d-8117-562004d57054
+
+	measure 'Damaged (Confirmed)' = CALCULATE ( COUNTROWS ( equipment_losses ), equipment_losses[status] = "Damaged" )
+		formatString: 0
+		lineageTag: 11087365-ebb4-4dca-83fa-680426315e53
+
+	measure 'Abandoned (Confirmed)' = CALCULATE ( COUNTROWS ( equipment_losses ), equipment_losses[status] = "Abandoned" )
+		formatString: 0
+		lineageTag: 4bbe00f4-b09c-4304-8454-d1a202e2c9fe
+
+	measure 'Captured (Confirmed)' = CALCULATE ( COUNTROWS ( equipment_losses ), equipment_losses[status] = "Captured" )
+		formatString: 0
+		lineageTag: 39514c17-1188-41d9-94c4-1048cce9e3cb
+
+	column type
+		dataType: string
+		lineageTag: 685d5cd5-34a5-4ed4-986a-ba1bf34005f4
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column destroyed
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b20a2d9-afa4-424a-a086-08bfdee84ac2
+		summarizeBy: none
+		sourceColumn: destroyed
+
+		annotation SummarizationSetBy = Automatic
+
+	column damaged
+		dataType: int64
+		formatString: 0
+		lineageTag: c92d5aaf-bc05-455a-9c9e-5983368e433f
+		summarizeBy: none
+		sourceColumn: damaged
+
+		annotation SummarizationSetBy = Automatic
+
+	column abandoned
+		dataType: int64
+		formatString: 0
+		lineageTag: 485a66ea-c96a-4925-b08e-925c88bc4370
+		summarizeBy: none
+		sourceColumn: abandoned
+
+		annotation SummarizationSetBy = Automatic
+
+	column captured
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c6e8a4c-7a59-433f-bf66-463a54581d34
+		summarizeBy: none
+		sourceColumn: captured
+
+		annotation SummarizationSetBy = Automatic
+
+	column total
+		dataType: int64
+		formatString: 0
+		lineageTag: bbb7d8f0-e478-4867-89c6-dafd20a4297c
+		summarizeBy: none
+		sourceColumn: total
+
+		annotation SummarizationSetBy = Automatic
+
+	partition equipment_by_type = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\equipment_by_type.csv"),[Delimiter=",", Columns=6, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"type", type text}, {"destroyed", Int64.Type}, {"damaged", Int64.Type}, {"abandoned", Int64.Type}, {"captured", Int64.Type}, {"total", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

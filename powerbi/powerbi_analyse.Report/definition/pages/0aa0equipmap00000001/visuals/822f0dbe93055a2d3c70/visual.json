@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "822f0dbe93055a2d3c70",
+  "position": {
+    "x": 972.42071156073257,
+    "y": 163.174262551945,
+    "z": 13000,
+    "height": 391.76946658491721,
+    "width": 283.50269091899992,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "equipment_losses"
+                    }
+                  },
+                  "Property": "type"
+                }
+              },
+              "queryRef": "equipment_losses.type",
+              "nativeQueryRef": "type"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "equipment_losses"
+                  }
+                },
+                "Property": "type"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

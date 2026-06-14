@@ -1,0 +1,61 @@
+table equipment_meta
+	lineageTag: 56f4da74-e9db-4456-9c35-8a127a7ccc65
+
+	column attribution
+		dataType: string
+		lineageTag: 2503a441-47de-4209-88be-face4d50d90e
+		summarizeBy: none
+		sourceColumn: attribution
+
+		annotation SummarizationSetBy = Automatic
+
+	column warspotting_total
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d299657-2a22-4984-a378-cb383e111438
+		summarizeBy: sum
+		sourceColumn: warspotting_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column oryx_total
+		dataType: int64
+		formatString: 0
+		lineageTag: 9503ca2b-9903-4128-abb8-c957454da4bc
+		summarizeBy: sum
+		sourceColumn: oryx_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column destroyed
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d6b8193-636d-4676-9706-0cdedde214c5
+		summarizeBy: sum
+		sourceColumn: destroyed
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_through
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 80bc8f92-e381-462b-9f96-03a2a6505098
+		summarizeBy: none
+		sourceColumn: updated_through
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition equipment_meta = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\equipment_meta.csv"),[Delimiter=",", Columns=5, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"attribution", type text}, {"warspotting_total", Int64.Type}, {"oryx_total", Int64.Type}, {"destroyed", Int64.Type}, {"updated_through", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

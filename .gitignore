@@ -1,0 +1,44 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------------------
+# Raw / intermediate data — the scripts' "kitchen". Large and fully re-creatable
+# from the source scripts (download_list / fetch_all / geo_regions / build_powerbi).
+# NOT redistributed and NOT needed in the repo — the dashboard reads only the
+# published tables under powerbi/. So the whole data/ folder is ignored.
+# ---------------------------------------------------------------------------
+data/
+
+# ---------------------------------------------------------------------------
+# Power BI binaries & local caches
+# ---------------------------------------------------------------------------
+# Binary report file (the text-based PBIP project is committed instead)
+powerbi/*.pbix
+# Power BI Desktop autosave junk
+powerbi/*—save*.pbip
+# AMO/TOM client libraries (Microsoft redistributables — install locally)
+powerbi/lib/
+# Big mirror dump — re-downloaded by the daily Action on every run, not committed.
+powerbi/ds_hist.geojson.gz
+# NOTE: powerbi/wb_hist.json + powerbi/frontline_cache_hist.csv ARE committed on purpose:
+# the daily GitHub Action reads them to skip re-scraping the API/Wayback (the frontline
+# history backbone). Do NOT ignore them.
+
+# ---------------------------------------------------------------------------
+# Large media / recordings (not part of the repo)
+# ---------------------------------------------------------------------------
+*.mp4
+*.mov
+
+# ---------------------------------------------------------------------------
+# Editor / OS
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.tmp

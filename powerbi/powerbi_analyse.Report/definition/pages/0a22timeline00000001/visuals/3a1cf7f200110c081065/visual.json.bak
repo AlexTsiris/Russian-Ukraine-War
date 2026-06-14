@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "3a1cf7f200110c081065",
+  "position": {
+    "x": 39.76312979322396,
+    "y": 316.51451315406274,
+    "z": 2,
+    "height": 313.3334627706048,
+    "width": 1219.932822056111,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "casualties"
+                            }
+                          },
+                          "Name": "Изменение",
+                          "Property": "death_date"
+                        }
+                      },
+                      "Hierarchy": "Иерархия дат"
+                    }
+                  },
+                  "Level": "Год"
+                }
+              },
+              "queryRef": "casualties.death_date.Изменение.Иерархия дат.Год",
+              "nativeQueryRef": "death_date Год",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "casualties"
+                            }
+                          },
+                          "Name": "Изменение",
+                          "Property": "death_date"
+                        }
+                      },
+                      "Hierarchy": "Иерархия дат"
+                    }
+                  },
+                  "Level": "Месяц"
+                }
+              },
+              "queryRef": "casualties.death_date.Изменение.Иерархия дат.Месяц",
+              "nativeQueryRef": "death_date Месяц",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "casualties"
+                    }
+                  },
+                  "Property": "war_phase"
+                }
+              },
+              "queryRef": "casualties.war_phase",
+              "nativeQueryRef": "war_phase"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "casualties"
+                    }
+                  },
+                  "Property": "Total Confirmed Deaths"
+                }
+              },
+              "queryRef": "casualties.Total Confirmed Deaths",
+              "nativeQueryRef": "Total Confirmed Deaths"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

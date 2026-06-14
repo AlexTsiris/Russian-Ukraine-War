@@ -1,0 +1,38 @@
+table conflict_context
+	lineageTag: 58dcf673-a895-417e-b023-41883f9d1462
+
+	/// Military deaths per conflict (officials' own counts; Ukraine = confirmed floor).
+	measure 'Conflict Deaths' = SUM ( conflict_context[Deaths] )
+		formatString: #,0
+		displayFolder: 06 Context
+		lineageTag: 868e5f7e-f45c-466e-960f-d04cf683b1c1
+
+	/// Ukraine bar uses the LIVE confirmed count (grows with data); others static.
+	measure 'Conflict Deaths Live' = IF ( SELECTEDVALUE ( conflict_context[Conflict] ) = "Russia in Ukraine (confirmed)", [Total Confirmed Deaths], SUM ( conflict_context[Deaths] ) )
+		formatString: #,0
+		displayFolder: 06 Context
+		lineageTag: a2000002-0002-0002-0002-000000000001
+
+	column Conflict
+		lineageTag: 0e4bafe8-93ef-4273-8677-33cb4af799f4
+		isNameInferred
+		sourceColumn: [Conflict]
+
+	column Deaths
+		lineageTag: 16344b75-5da4-494a-8d73-663e32fd0082
+		isNameInferred
+		sourceColumn: [Deaths]
+
+	column SortOrder
+		lineageTag: 43de4087-3ada-4347-9227-f597c1081598
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+	column Side
+		lineageTag: f3e2cc20-7df0-4bee-82aa-c24e3049887c
+		isNameInferred
+		sourceColumn: [Side]
+
+	partition conflict_context = calculated
+		source = DATATABLE ( "Conflict", STRING, "Deaths", INTEGER, "SortOrder", INTEGER, "Side", STRING, { { "Russia in Ukraine (confirmed)", 0, 1, "Russia / USSR" }, { "US in Vietnam", 58220, 2, "United States" }, { "USSR in Afghanistan", 14453, 3, "Russia / USSR" }, { "US in Iraq + Afghanistan", 7073, 4, "United States" }, { "Russia in Chechnya II", 6000, 5, "Russia / USSR" }, { "Russia in Chechnya I", 5500, 6, "Russia / USSR" } } )
+

@@ -1,0 +1,215 @@
+{
+  "name": "Russia200 Editorial Dark",
+  "dataColors": [
+    "#D04949",
+    "#E58A86",
+    "#8A9099",
+    "#5A626B",
+    "#B23A36",
+    "#C0C4CA",
+    "#3A4049",
+    "#E8B4B1",
+    "#6E767F",
+    "#2A2F36"
+  ],
+  "foreground": "#ECE6E6",
+  "foregroundNeutralSecondary": "#A89B9C",
+  "foregroundNeutralTertiary": "#6E5F60",
+  "background": "#0E0B0C",
+  "backgroundLight": "#1A1517",
+  "backgroundNeutral": "#2B2225",
+  "tableAccent": "#D04949",
+  "good": "#5A626B",
+  "neutral": "#9AA0A8",
+  "bad": "#D04949",
+  "maximum": "#D04949",
+  "center": "#7A3F3D",
+  "minimum": "#1B1F26",
+  "null": "#3A4049",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 48,
+      "color": "#FFFFFF"
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13,
+      "color": "#F4F1F1"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13,
+      "color": "#F4F1F1"
+    },
+    "label": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#D6CFD0"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#1A1517"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#3A2D2F"
+              }
+            },
+            "radius": 10
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontColor": {
+              "solid": {
+                "color": "#E8EAED"
+              }
+            },
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 11,
+            "alignment": "left",
+            "titleWrap": true
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0E0B0C"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0E0B0C"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "cardVisual": {
+      "*": {
+        "calloutValue": [
+          {
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 46,
+            "bold": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        ],
+        "calloutLabel": [
+          {
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 12,
+            "color": {
+              "solid": {
+                "color": "#D6CFD0"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "barChart": {
+      "*": {
+        "categoryAxis": [
+          {
+            "showAxisTitle": false,
+            "labelColor": {
+              "solid": {
+                "color": "#E4DEDE"
+              }
+            },
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 12
+          }
+        ],
+        "valueAxis": [
+          {
+            "show": false
+          }
+        ],
+        "dataLabels": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 11
+          }
+        ]
+      }
+    },
+    "columnChart": {
+      "*": {
+        "categoryAxis": [
+          {
+            "showAxisTitle": false,
+            "labelColor": {
+              "solid": {
+                "color": "#E4DEDE"
+              }
+            },
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 12
+          }
+        ],
+        "valueAxis": [
+          {
+            "show": false
+          }
+        ],
+        "dataLabels": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 11
+          }
+        ]
+      }
+    }
+  }
+}

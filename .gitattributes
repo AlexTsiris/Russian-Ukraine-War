@@ -1,0 +1,15 @@
+# Normalize line endings so the Linux GitHub Actions runner gets LF
+# (CRLF in the workflow's shell block would break bash on the runner).
+* text=auto
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.sh   text eol=lf
+*.py   text eol=lf
+*.md   text eol=lf
+
+# Binary assets — never touch line endings
+*.gz   binary
+*.png  binary
+*.jpg  binary
+*.pbix binary
+*.mp4  binary

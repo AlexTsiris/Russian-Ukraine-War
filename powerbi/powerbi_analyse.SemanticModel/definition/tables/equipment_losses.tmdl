@@ -1,0 +1,78 @@
+table equipment_losses
+	lineageTag: 2249c038-cc2c-4743-81e2-b348630de0a9
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3e22f529-654f-44d1-9da0-5593594f799b
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column type
+		dataType: string
+		lineageTag: aea12181-7bc1-436d-9f7e-30890efb45f1
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: a9b3ce26-6e7d-4200-89a2-6ca69dc1ef2f
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column model
+		dataType: string
+		lineageTag: 31cf3038-77fa-42db-a975-9de3729f3d17
+		summarizeBy: none
+		sourceColumn: model
+
+		annotation SummarizationSetBy = Automatic
+
+	column oblast
+		dataType: string
+		lineageTag: 7b5ca8b8-acd8-4efe-98eb-5fa151a701b5
+		summarizeBy: none
+		sourceColumn: oblast
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: double
+		lineageTag: 59557853-2b1b-49d7-982e-306c17159682
+		summarizeBy: sum
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lon
+		dataType: double
+		lineageTag: 4e53fa97-2563-497b-87b2-15dabb202976
+		summarizeBy: sum
+		sourceColumn: lon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition equipment_losses = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\equipment_losses.csv"),[Delimiter=",", Columns=7, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"date", type date}, {"type", type text}, {"status", type text}, {"model", type text}, {"oblast", type text}, {"lat", type number}, {"lon", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

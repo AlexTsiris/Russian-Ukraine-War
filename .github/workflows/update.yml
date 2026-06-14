@@ -1,0 +1,68 @@
+name: Update dashboard data
+
+# Rebuilds the public data tables daily and commits them back to powerbi/.
+# Maps that read frontline.geojson / CSVs by raw-URL update with no Power BI refresh;
+# tables loaded via Get Data -> Web refresh on their Power BI Service schedule.
+#
+# Cloud-safe sources only (no Cloudflare, no API key):
+#   frontline  — DeepStateMap GPL mirror      equipment — WarSpotting + Oryx mirrors
+#   strikes    — Wikipedia API                 casualties geography — Mediazona open CDN
+# The per-person casualties detail (branch/rank/death date) comes from the rate-limited
+# /api/case and is collected locally, NOT here.
+
+on:
+  schedule:
+    - cron: "30 4 * * *"      # 04:30 UTC daily
+  workflow_dispatch: {}        # + manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: powerbi    # all build scripts write into powerbi/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      # frontline: history from the committed caches (frontline_cache_hist.csv + wb_hist.json,
+      # no API/Wayback); the recent mirror is downloaded fresh each run.
+      - name: Build frontline data
+        run: python build_frontline.py
+
+      - name: Build equipment data
+        run: python build_equipment.py
+
+      - name: Build strikes data
+        run: python build_strikes.py
+
+      - name: Build casualties geography
+        run: python build_casualties_geo.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add frontline.geojson frontline_history.csv frontline_meta.csv
+          git add equipment_losses.csv equipment_by_month.csv equipment_by_type.csv equipment_crosscheck.csv equipment_meta.csv
+          git add strategic_strikes.csv strikes_crosscheck.csv strikes_meta.csv
+          git add regions.csv settlements.csv
+          if git diff --quiet --cached; then
+            echo "No changes."
+          else
+            git commit -m "Update dashboard data $(date -u +%F)"
+            git push
+          fi

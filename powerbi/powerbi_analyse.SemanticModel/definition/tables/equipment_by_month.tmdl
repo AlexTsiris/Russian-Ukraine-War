@@ -1,0 +1,44 @@
+table equipment_by_month
+	lineageTag: 6299c339-6012-498d-8cb7-52300c86cd64
+
+	column month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 55aa2112-793b-46d7-a396-e41bb31197c9
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column total
+		dataType: int64
+		formatString: 0
+		lineageTag: edd86f12-f92f-47d4-9348-d6a9b9d6337f
+		summarizeBy: sum
+		sourceColumn: total
+
+		annotation SummarizationSetBy = Automatic
+
+	column destroyed
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ffb1437-c4c6-492f-9fa3-11dc0106029f
+		summarizeBy: sum
+		sourceColumn: destroyed
+
+		annotation SummarizationSetBy = Automatic
+
+	partition equipment_by_month = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\equipment_by_month.csv"),[Delimiter=",", Columns=3, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"month", type date}, {"total", Int64.Type}, {"destroyed", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

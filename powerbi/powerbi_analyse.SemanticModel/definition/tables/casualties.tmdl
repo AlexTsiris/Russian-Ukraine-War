@@ -1,0 +1,367 @@
+table casualties
+	lineageTag: 639fe929-bdec-4dca-84b1-77ed5dccfe76
+
+	/// Number of confirmed, named deaths (lower bound).
+	measure 'Total Confirmed Deaths' = COUNTROWS ( casualties )
+		formatString: #,0
+		displayFolder: 01 Core
+		lineageTag: 320dbc08-3b86-4d56-b3ca-acf64ff01027
+
+	/// Share of all confirmed deaths in the current filter context.
+	measure 'Share of Total' = DIVIDE ( [Total Confirmed Deaths], CALCULATE ( [Total Confirmed Deaths], ALL ( casualties ) ) )
+		formatString: 0.0%
+		displayFolder: 01 Core
+		lineageTag: 6fac126a-5126-43b7-b4f0-2baf3c9fd14c
+
+	/// 95% confidence margin (percentage points) for a share.
+	measure 'Share 95% CI (+/- pp)' = VAR p = [Share of Total] VAR n = CALCULATE ( [Total Confirmed Deaths], ALL ( casualties ) ) RETURN 1.96 * SQRT ( DIVIDE ( p * ( 1 - p ), n ) )
+		formatString: 0.0%
+		displayFolder: 01 Core
+		lineageTag: cab268d9-5664-4a51-857c-f133b003c6b2
+
+	/// Records that have an age value.
+	measure 'Deaths with Known Age' = COUNTROWS ( FILTER ( casualties, NOT ISBLANK ( casualties[age] ) ) )
+		formatString: #,0
+		displayFolder: 02 Demographics
+		lineageTag: e94eda72-8de7-4195-86ed-b71ef9608944
+
+	/// Mean age of the dead.
+	measure 'Average Age' = AVERAGE ( casualties[age] )
+		formatString: 0.0
+		displayFolder: 02 Demographics
+		lineageTag: c8b83028-6cd1-49f3-8715-6481536bf89f
+
+	/// Median age of the dead.
+	measure 'Median Age' = MEDIAN ( casualties[age] )
+		formatString: 0
+		displayFolder: 02 Demographics
+		lineageTag: a60e3ba0-5542-4cbb-99a3-2c6340bb1a63
+
+	/// Share under 20 among those with known age.
+	measure '% Aged Under 20' = DIVIDE ( CALCULATE ( [Total Confirmed Deaths], casualties[age] < 20 ), [Deaths with Known Age] )
+		formatString: 0.0%
+		displayFolder: 02 Demographics
+		lineageTag: 0bfb7938-d948-4233-a710-98fa869e5600
+
+	/// Share aged 55+ among those with known age.
+	measure '% Aged 55 and Over' = DIVIDE ( CALCULATE ( [Total Confirmed Deaths], casualties[age] >= 55 ), [Deaths with Known Age] )
+		formatString: 0.0%
+		displayFolder: 02 Demographics
+		lineageTag: a0ad589b-3ae8-4047-b725-74c194a24ab4
+
+	/// Share of records where military rank is known.
+	measure '% Rank Known' = DIVIDE ( CALCULATE ( [Total Confirmed Deaths], casualties[rank_category] <> "Unknown" ), [Total Confirmed Deaths] )
+		formatString: 0.0%
+		displayFolder: 03 Data quality
+		lineageTag: b2511201-5db9-4479-9652-584967303a0d
+
+	/// Share of records where service branch is known.
+	measure '% Branch Known' = DIVIDE ( CALCULATE ( [Total Confirmed Deaths], casualties[branch_en] <> "No data" ), [Total Confirmed Deaths] )
+		formatString: 0.0%
+		displayFolder: 03 Data quality
+		lineageTag: 99ce6bd5-a1aa-471a-976b-4ac7564d7baa
+
+	/// Share of records with a known date of death.
+	measure '% with Known Death Date' = DIVIDE ( COUNTROWS ( FILTER ( casualties, NOT ISBLANK ( casualties[death_date] ) ) ), [Total Confirmed Deaths] )
+		formatString: 0.0%
+		displayFolder: 03 Data quality
+		lineageTag: 52c13bda-048b-4d31-a3a4-a15f712311ff
+
+	/// Confirmed deaths in the deadliest month.
+	measure 'Peak Month Deaths' = VAR t = ADDCOLUMNS ( FILTER ( ALL ( casualties[death_month_start] ), NOT ISBLANK ( casualties[death_month_start] ) ), "@n", CALCULATE ( COUNTROWS ( casualties ) ) ) RETURN MAXX ( t, [@n] )
+		formatString: #,0
+		displayFolder: 04 Timeline
+		lineageTag: 5d8fc9b9-2f16-42d4-84da-5b8a19f1f4ea
+
+	/// Name of the deadliest month.
+	measure 'Deadliest Month' = VAR t = ADDCOLUMNS ( FILTER ( ALL ( casualties[death_month_start] ), NOT ISBLANK ( casualties[death_month_start] ) ), "@n", CALCULATE ( COUNTROWS ( casualties ) ) ) VAR mx = MAXX ( t, [@n] ) VAR d = MINX ( FILTER ( t, [@n] = mx ), casualties[death_month_start] ) RETURN FORMAT ( d, "MMMM yyyy", "en-US" )
+		displayFolder: 04 Timeline
+		lineageTag: 1ecd1998-f68e-4f3d-b400-3ddc76e992b3
+
+	/// Confirmed deaths per day since 24 Feb 2022 (dynamic).
+	measure 'Deaths per Day' = VAR d1 = MIN ( casualties[death_date] ) VAR d2 = MAX ( casualties[death_date] ) VAR days = DATEDIFF ( d1, d2, DAY ) + 1 RETURN DIVIDE ( [Total Confirmed Deaths], days )
+		formatString: #,0
+		displayFolder: 06 Context
+		lineageTag: a1000001-0001-0001-0001-000000000001
+
+	/// Ratio vs the entire Soviet-Afghan War (14,453). Dynamic text.
+	measure 'Ratio vs Afghan War' = FORMAT ( DIVIDE ( [Total Confirmed Deaths], 14453 ), "0.0", "en-US" ) & "×"
+		displayFolder: 06 Context
+		lineageTag: a1000001-0001-0001-0001-000000000002
+
+	/// Ratio vs all post-1945 Soviet & Russian wars combined (25,953). Dynamic text.
+	measure 'Ratio vs Post-1945 Wars' = FORMAT ( DIVIDE ( [Total Confirmed Deaths], 25953 ), "0.0", "en-US" ) & "×"
+		displayFolder: 06 Context
+		lineageTag: a1000001-0001-0001-0001-000000000003
+
+	/// One confirmed death every N minutes (dynamic text).
+	measure 'Death Frequency' = "every " & FORMAT ( DIVIDE ( 1440, [Deaths per Day] ), "0", "en-US" ) & " min"
+		displayFolder: 06 Context
+		lineageTag: a1000001-0001-0001-0001-000000000004
+
+	/// Years of life lost (sum of 66 - age, for ages under 66). Dynamic.
+	measure 'Years of Life Lost' = SUMX ( FILTER ( casualties, NOT ISBLANK ( casualties[age] ) && casualties[age] < 66 ), 66 - casualties[age] )
+		formatString: #,0
+		displayFolder: 02 Demographics
+		lineageTag: a1000001-0001-0001-0001-000000000005
+
+	/// Visually-confirmed Russian equipment losses in context (WarSpotting; a lower bound).
+	measure 'Equipment Losses (Confirmed)' = COUNTROWS ( equipment_losses )
+		formatString: #,0
+		displayFolder: 07 Cost of Advance
+		lineageTag: a50d9d09-0bdb-4586-96dd-85dc93c71888
+
+	/// Net change in Russian-occupied area between the first and last snapshot in view (km2). Negative = Russia lost ground.
+	measure 'Territory Captured (km2)' = VAR MinD = MIN ( frontline_history[snapshot_date_dt] ) VAR MaxD = MAX ( frontline_history[snapshot_date_dt] ) VAR StartKm = CALCULATE ( SUM ( frontline_history[occupied_km2] ), frontline_history[snapshot_date_dt] = MinD ) VAR EndKm = CALCULATE ( SUM ( frontline_history[occupied_km2] ), frontline_history[snapshot_date_dt] = MaxD ) RETURN EndKm - StartKm
+		formatString: #,0
+		displayFolder: 07 Cost of Advance
+		lineageTag: 406c9246-919a-472f-ba48-8309ad733968
+
+	/// Confirmed Russian dead per net km2 gained in view. Illustrative lower bound — not all deaths are for territory; real toll is higher than confirmed names.
+	measure 'Lives per km2 Captured' = VAR Terr = [Territory Captured (km2)] RETURN IF ( Terr > 0, DIVIDE ( [Total Confirmed Deaths], Terr ) )
+		formatString: #,0.0
+		displayFolder: 07 Cost of Advance
+		lineageTag: 50169c15-24ea-4f9b-90fe-da578acacdb2
+
+	/// Confirmed equipment lost per net km2 gained in view. Illustrative lower bound.
+	measure 'Equipment per km2 Captured' = VAR Terr = [Territory Captured (km2)] RETURN IF ( Terr > 0, DIVIDE ( [Equipment Losses (Confirmed)], Terr ) )
+		formatString: #,0.0
+		displayFolder: 07 Cost of Advance
+		lineageTag: 9c4445e3-1a79-4122-9fdc-1ce15d26af68
+
+	/// Net km2 gained for every 1,000 confirmed Russian dead in view. Illustrative.
+	measure 'km2 per 1,000 Confirmed Dead' = VAR Terr = [Territory Captured (km2)] RETURN IF ( Terr > 0, DIVIDE ( Terr, [Total Confirmed Deaths] ) * 1000 )
+		formatString: #,0.00
+		displayFolder: 07 Cost of Advance
+		lineageTag: a74ac654-d6bd-46e1-8dbc-bdc17b5605c4
+
+	column uid
+		dataType: string
+		lineageTag: 2b885ee8-8e35-4bff-9835-bac96eef5fcc
+		summarizeBy: none
+		sourceColumn: uid
+
+		annotation SummarizationSetBy = Automatic
+
+	column name_en
+		dataType: string
+		lineageTag: 02792d34-d916-4ae1-a278-c4eaca20789b
+		summarizeBy: none
+		sourceColumn: name_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column name_ru
+		dataType: string
+		lineageTag: 048424e0-fdf0-4d66-9389-a0a124cd6c44
+		summarizeBy: none
+		sourceColumn: name_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_en
+		dataType: string
+		lineageTag: 633d8100-7fbc-475d-be7e-ee3559681ec7
+		summarizeBy: none
+		sourceColumn: region_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_ru
+		dataType: string
+		lineageTag: d6f72a17-ca87-4d8b-a00d-f91f3bcc2bb3
+		summarizeBy: none
+		sourceColumn: region_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column branch_en
+		dataType: string
+		lineageTag: 8bb117db-4d01-4db5-9c39-8316164d4da7
+		summarizeBy: none
+		sourceColumn: branch_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column branch_ru
+		dataType: string
+		lineageTag: 231f3f0c-f7ac-4bf2-86c4-bb5686c7f8ac
+		summarizeBy: none
+		sourceColumn: branch_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column rank_en
+		dataType: string
+		lineageTag: c124ec6a-68e0-49e7-9012-06db803353ea
+		summarizeBy: none
+		sourceColumn: rank_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column rank_category
+		dataType: string
+		lineageTag: e3882b2a-fcfc-4bf8-82d2-21053c6e5fbf
+		summarizeBy: none
+		sourceColumn: rank_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column rank_ru
+		dataType: string
+		lineageTag: f1268702-959d-4e1b-b5fd-13cc7ad2a8e1
+		summarizeBy: none
+		sourceColumn: rank_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: fdd8f436-e8a8-4d2f-b3d7-b5460c2134d0
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column birth_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 76bebf6b-9ad7-411d-bddf-8231a80593d1
+		summarizeBy: none
+		sourceColumn: birth_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column death_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1c458dc4-1d25-4997-b8f4-1ed4c3d53f9f
+		summarizeBy: none
+		sourceColumn: death_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column death_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 135dde6f-1b49-48bb-9f58-cc718f87dca5
+		summarizeBy: sum
+		sourceColumn: death_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column death_month
+		dataType: int64
+		formatString: 0
+		lineageTag: baef3879-4438-4bb0-b5d0-7d1fd9f7de1b
+		summarizeBy: sum
+		sourceColumn: death_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column death_month_name
+		dataType: string
+		lineageTag: 07cabde9-5b52-4223-85d8-41f18cf1afc1
+		summarizeBy: none
+		sourceColumn: death_month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column city_en
+		dataType: string
+		lineageTag: 6c7ca08a-f9c3-4efc-9a6e-84a5f73fe718
+		summarizeBy: none
+		sourceColumn: city_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column city_ru
+		dataType: string
+		lineageTag: 3641413a-a3a9-4bb9-a5f0-a0869223edac
+		summarizeBy: none
+		sourceColumn: city_ru
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_url
+		dataType: string
+		lineageTag: 73245d3d-5003-48e4-955a-4eb91f8d845a
+		summarizeBy: none
+		sourceColumn: source_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column death_month_start = IF ( NOT ISBLANK ( casualties[death_date] ), DATE ( YEAR ( casualties[death_date] ), MONTH ( casualties[death_date] ), 1 ) )
+		dataType: dateTime
+		formatString: MMM yyyy
+		lineageTag: d8f21a37-acb9-4f7b-91b0-ddb0e8bc29a9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group = VAR a = casualties[age] RETURN SWITCH ( TRUE (), ISBLANK ( a ), "Unknown", a < 20, "<20", a < 25, "20–24", a < 30, "25–29", a < 35, "30–34", a < 40, "35–39", a < 45, "40–44", a < 50, "45–49", a < 55, "50–54", a < 60, "55–59", "60+" )
+		dataType: string
+		lineageTag: f737a2e2-23ac-42ac-a3f9-c71300928a2b
+		summarizeBy: none
+		sortByColumn: age_group_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group_sort = VAR a = casualties[age] RETURN SWITCH ( TRUE (), ISBLANK ( a ), 99, a < 20, 0, a < 25, 1, a < 30, 2, a < 35, 3, a < 40, 4, a < 45, 5, a < 50, 6, a < 55, 7, a < 60, 8, 9 )
+		dataType: int64
+		lineageTag: f3b6d18a-aa42-41a9-8dca-652a2be0fe32
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column branch_group = SWITCH ( casualties[branch_en], "Volunteers (contract)", "Volunteers", "Convicts (prison recruits)", "Convicts", "Mobilized", "Mobilized", "Motorized rifle troops", "Motorized rifle", "Airborne (VDV)", "Airborne", "PMC (Wagner etc.)", "PMC / Wagner", "No data", "No data", "Other branches" )
+		dataType: string
+		lineageTag: 5229e26b-149a-4337-b609-9cb276542e7f
+		summarizeBy: none
+		sortByColumn: branch_group_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column branch_group_sort = SWITCH ( casualties[branch_en], "Volunteers (contract)", 0, "Convicts (prison recruits)", 1, "Mobilized", 2, "Motorized rifle troops", 3, "Airborne (VDV)", 4, "PMC (Wagner etc.)", 5, "No data", 7, 6 )
+		dataType: int64
+		lineageTag: 0d443467-8f66-4fed-a07d-34045f28d9d1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column war_phase = VAR d = casualties[death_month_start] RETURN SWITCH ( TRUE (), ISBLANK ( d ), "Unknown date", d < DATE ( 2022, 4, 1 ), "1 · Invasion & Kyiv (Feb–Mar 2022)", d < DATE ( 2022, 9, 1 ), "2 · Donbas offensive (Apr–Aug 2022)", d < DATE ( 2022, 11, 1 ), "3 · UA counter-offensives + mobilization (Sep–Oct 2022)", d < DATE ( 2023, 6, 1 ), "4 · Bakhmut (Nov 2022–May 2023)", d < DATE ( 2023, 10, 1 ), "5 · UA summer counter-offensive (Jun–Sep 2023)", d < DATE ( 2024, 3, 1 ), "6 · Avdiivka (Oct 2023–Feb 2024)", d < DATE ( 2025, 1, 1 ), "7 · Pokrovsk & attrition (2024)", "8 · Attrition (2025– )" )
+		dataType: string
+		lineageTag: 7ab5d691-e799-4afe-984e-330f9fb6ecd7
+		summarizeBy: none
+		sortByColumn: war_phase_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column war_phase_sort = VAR d = casualties[death_month_start] RETURN SWITCH ( TRUE (), ISBLANK ( d ), 99, d < DATE ( 2022, 4, 1 ), 1, d < DATE ( 2022, 9, 1 ), 2, d < DATE ( 2022, 11, 1 ), 3, d < DATE ( 2023, 6, 1 ), 4, d < DATE ( 2023, 10, 1 ), 5, d < DATE ( 2024, 3, 1 ), 6, d < DATE ( 2025, 1, 1 ), 7, 8 )
+		dataType: int64
+		lineageTag: 031c680d-53bf-4ede-85d8-0e3750473afa
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition casualties = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\aleks\OneDrive\Desktop\моя учеба\мой проект\powerbi\casualties.csv"),[Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"uid", type text}, {"name_en", type text}, {"name_ru", type text}, {"region_en", type text}, {"region_ru", type text}, {"branch_en", type text}, {"branch_ru", type text}, {"rank_en", type text}, {"rank_category", type text}, {"rank_ru", type text}, {"age", Int64.Type}, {"birth_date", type date}, {"death_date", type date}, {"death_year", Int64.Type}, {"death_month", Int64.Type}, {"death_month_name", type text}, {"city_en", type text}, {"city_ru", type text}, {"source_url", type text}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type", {{"birth_date", null}}),
+				    #"Replaced Errors1" = Table.ReplaceErrorValues(#"Replaced Errors", {{"death_date", null}})
+				in
+				    #"Replaced Errors1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

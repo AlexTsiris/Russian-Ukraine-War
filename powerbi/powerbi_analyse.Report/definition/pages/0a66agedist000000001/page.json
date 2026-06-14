@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "0a66agedist000000001",
+  "displayName": "Demographics",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "dmhist0000000000001",
+      "target": "dmcard0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmhist0000000000001",
+      "target": "dmcard0000000000002",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmhist0000000000001",
+      "target": "dmcard0000000000003",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmhist0000000000001",
+      "target": "dmcard0000000000004",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000004",
+      "target": "dmhist0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000003",
+      "target": "dmhist0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000002",
+      "target": "dmhist0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000001",
+      "target": "dmhist0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000001",
+      "target": "dmcard0000000000002",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000001",
+      "target": "dmcard0000000000003",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000001",
+      "target": "dmcard0000000000004",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000002",
+      "target": "dmcard0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000002",
+      "target": "dmcard0000000000003",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000002",
+      "target": "dmcard0000000000004",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000003",
+      "target": "dmcard0000000000002",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000003",
+      "target": "dmcard0000000000001",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000003",
+      "target": "dmcard0000000000004",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000004",
+      "target": "dmcard0000000000003",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000004",
+      "target": "dmcard0000000000002",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dmcard0000000000004",
+      "target": "dmcard0000000000001",
+      "type": "NoFilter"
+    }
+  ]
+}

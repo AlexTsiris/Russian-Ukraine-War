@@ -1,0 +1,38 @@
+table Calendar
+	lineageTag: d653d5db-25b0-4766-b2c5-7b341de33fe4
+	dataCategory: Time
+
+	column Date
+		lineageTag: 83232d68-a5cc-4904-ad72-1b6bccd80cfb
+		isNameInferred
+		sourceColumn: [Date]
+
+	column Year
+		lineageTag: b783388f-ef89-480a-af99-4dff7d17d574
+		isNameInferred
+		sourceColumn: [Year]
+
+	column MonthNo
+		lineageTag: 712eec54-883b-40ff-995e-c343b7048799
+		isNameInferred
+		sourceColumn: [MonthNo]
+
+	column Month
+		lineageTag: af625456-eaad-4695-939b-c5acdb7dbc17
+		isNameInferred
+		sourceColumn: [Month]
+		sortByColumn: MonthNo
+
+	column YearMonth
+		lineageTag: a26f5467-4419-4bcb-8536-011347d03112
+		isNameInferred
+		sourceColumn: [YearMonth]
+
+	column MonthStart
+		lineageTag: 8e7a0e10-a928-49d2-ab17-b4aa229f9216
+		isNameInferred
+		sourceColumn: [MonthStart]
+
+	partition Calendar = calculated
+		source = ADDCOLUMNS ( CALENDAR ( DATE ( 2022, 1, 1 ), DATE ( 2026, 12, 31 ) ), "Year", YEAR ( [Date] ), "MonthNo", MONTH ( [Date] ), "Month", FORMAT ( [Date], "MMM", "en-US" ), "YearMonth", FORMAT ( [Date], "YYYY-MM" ), "MonthStart", DATE ( YEAR ( [Date] ), MONTH ( [Date] ), 1 ) )
+

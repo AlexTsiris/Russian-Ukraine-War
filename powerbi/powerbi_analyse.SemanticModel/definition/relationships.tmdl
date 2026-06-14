@@ -1,0 +1,24 @@
+relationship AutoDetected_747a8cf1-6947-4115-bd4f-99b05ff50a5c
+	fromColumn: settlements.region_en
+	toColumn: regions.region_en
+
+relationship Связь
+	fromColumn: casualties.region_en
+	toColumn: regions.region_en
+
+relationship AutoDetected_d6bb9150-ec91-42dc-b5ac-d79493bb35b0
+	fromColumn: equipment_losses.type
+	toColumn: equipment_by_type.type
+
+relationship 'Связь 1'
+	fromColumn: casualties.death_date
+	toColumn: Calendar.Date
+
+relationship 'Связь 2'
+	fromColumn: equipment_losses.date
+	toColumn: Calendar.Date
+
+relationship 'Связь 3'
+	fromColumn: frontline_history.snapshot_date_dt
+	toColumn: Calendar.Date
+

@@ -1,0 +1,165 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1095.8604300995462,
+        "y": 187.01671723000578
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 555.49580973253057,
+            "y": 220.67317820527302
+          },
+          "nodeIndex": "casualties",
+          "nodeLineageTag": "639fe929-bdec-4dca-84b1-77ed5dccfe76",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 346.48359819827834,
+            "y": 0.56560720688642618
+          },
+          "nodeIndex": "regions",
+          "nodeLineageTag": "ce0f68b5-e20a-43e2-ac33-eb314b108355",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "settlements",
+          "nodeLineageTag": "58e4804c-8ea6-436d-8324-02f9900d5a0c",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 657.85099855684246,
+            "y": 3.5131214413772867
+          },
+          "nodeIndex": "conflict_context",
+          "nodeLineageTag": "58dcf673-a895-417e-b023-41883f9d1462",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 978.49173237336345,
+            "y": 327.77984045843266
+          },
+          "nodeIndex": "frontline_history",
+          "nodeLineageTag": "20f0971d-5257-49d6-9fdf-dca766ad1568",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 943.59046486197781,
+            "y": 0
+          },
+          "nodeIndex": "equipment_by_month",
+          "nodeLineageTag": "6299c339-6012-498d-8cb7-52300c86cd64",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1425.3737407211131,
+            "y": 413.48118160934018
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "d653d5db-25b0-4766-b2c5-7b341de33fe4",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1347.4330075654505,
+            "y": 33.270655929294463
+          },
+          "nodeIndex": "equipment_by_type",
+          "nodeLineageTag": "d4aebfe0-9aa9-4a43-96bc-d73133a90877",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 873.99232171609287,
+            "y": 680.95997197111183
+          },
+          "nodeIndex": "equipment_crosscheck",
+          "nodeLineageTag": "f5abff39-0cdc-4118-8f09-60ce774c3f4d",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1731.5033543448628,
+            "y": 31.620402028507009
+          },
+          "nodeIndex": "equipment_losses",
+          "nodeLineageTag": "2249c038-cc2c-4743-81e2-b348630de0a9",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1155.4956020764373,
+            "y": 671.94028980904591
+          },
+          "nodeIndex": "equipment_meta",
+          "nodeLineageTag": "56f4da74-e9db-4456-9c35-8a127a7ccc65",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Все таблицы",
+      "zoomValue": 112.1169364140609,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Все таблицы",
+  "defaultDiagram": "Все таблицы"
+}
