@@ -2080,7 +2080,7 @@ date,type,status,model,oblast,lat,lon
 2022-03-30,Transport,Destroyed,GAZ-3344-20 'Aleut' articulated tracked carrier,"Rudnia-Sydorivska, Vyshhorod raion",50.965203,29.578776
 2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),"Dmytrivka (Dmytrivka hromada), Bucha raion",50.46437,30.18227
 2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),East Ukraine,,
-2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),"Kopyliv, Bucha raion",50.41881410305166,29.859710214043997
+2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),"Kopyliv, Bucha raion",50.41881410305166,29.859710214044
 2022-03-30,Infantry fighting vehicles,Captured,BMP-2D,"Mala Shestirnia, Beryslav raion",47.55643,33.56099
 2022-03-30,Infantry fighting vehicles,Destroyed,BMD-2,"Irpin, Bucha raion",50.51837,30.20017
 2022-03-30,Infantry fighting vehicles,Destroyed,BTR-82A(M),"Velyka Novosilka, Volnovakha raion",47.817462,36.90363
@@ -2121,7 +2121,7 @@ date,type,status,model,oblast,lat,lon
 2022-03-31,Tanks,Destroyed,T-72B,"Nova Basan, Nizhyn raion",50.5697515,31.5146126
 2022-03-31,Tanks,Destroyed,T-72B,"Sukha Kamianka, Izium raion",49.088358,37.318721
 2022-03-31,Tanks,Destroyed,T-72B,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.46439,30.18241
-2022-03-31,Tanks,Destroyed,T-72B,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.45417819703755,30.176280123300916
+2022-03-31,Tanks,Destroyed,T-72B,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.45417819703755,30.17628012330092
 2022-03-31,Tanks,Captured,T-72B,"Bobryk, Brovary raion",50.64307,31.14858
 2022-03-31,Tanks,Destroyed,T-72B Obr. 1989,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.46427,30.18218
 2022-03-31,Tanks,Captured,T-72B Obr. 1989,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.45512,30.17904
@@ -2250,7 +2250,7 @@ date,type,status,model,oblast,lat,lon
 2022-03-31,Tanks,Captured,T-72B3 Obr. 2016,"Romny raion, Sumy oblast",,
 2022-03-31,Infantry fighting vehicles,Captured,BMP-2(K),Sumy oblast,,
 2022-03-31,Engineering,Captured,IMR-2(M) combat engineering vehicle,Sumy oblast,,
-2022-03-31,Engineering,Destroyed,TMM-3 bridge layer,"Sloboda-Kukharska, Vyshhorod raion",50.849101537191366,29.546632755553517
+2022-03-31,Engineering,Destroyed,TMM-3 bridge layer,"Sloboda-Kukharska, Vyshhorod raion",50.849101537191366,29.54663275555352
 2022-03-31,Transport,Destroyed,Ural-4320,"Hrezlia, Korosten raion",51.334679,29.272189
 2022-03-31,"Radars, jammers",Destroyed,R-330BMV jamming station (for RB-301B 'Borisoglebsk-2'),"Motyzhyn, Bucha raion",50.3897,29.97518
 2022-03-31,"Radars, jammers",Destroyed,R-934B 'Sinitsa' automated electronic warfare station,"Motyzhyn, Bucha raion",50.3896,29.97511
@@ -23061,11 +23061,13 @@ date,type,status,model,oblast,lat,lon
 2026-06-14,Transport,Destroyed,ZiL-131,"Temyrivka, Polohy raion",,
 2026-06-14,Transport,Destroyed,KrAZ-255B,"Malynivka, Pokrovsk raion",48.330684,37.460961
 2026-06-14,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.332177,37.458748
-2026-06-14,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.331567,37.458690
+2026-06-14,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.331567,37.45869
 2026-06-14,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Vysoke, Polohy raion",47.640438,36.417206
 2026-06-14,Transport,Destroyed,ZiL-131,"Vysoke, Polohy raion",47.660211,36.406988
 2026-06-14,Transport,Destroyed,'Ulan' all-terrain vehicle,"Vysoke, Polohy raion",47.660211,36.406988
 2026-06-14,Infantry fighting vehicles,Destroyed,BMP-1 or -2,"Vysoke, Polohy raion",47.660081,36.405242
-2026-06-14,Transport,Destroyed,'Ulan' all-terrain vehicle,"Vysoke, Polohy raion",47.660048,36.404850
+2026-06-14,Transport,Destroyed,'Ulan' all-terrain vehicle,"Vysoke, Polohy raion",47.660048,36.40485
 2026-06-14,Transport,Destroyed,'Ulan' all-terrain vehicle,"Vysoke, Polohy raion",47.659968,36.404187
 2026-06-14,Transport,Damaged,'Ulan-2' all-terrain vehicle,"Serebrianka reserve, Siverskodonetsk raion",,
+2026-06-15,Airplanes,Destroyed,Tu-22M3 strategic bomber,"Sklyanka, Bokhan raion",53.136139,103.405306
+2026-06-15,Transport,Destroyed,Ural-4320 fuel tanker,"Dolynske, Melitopol raion",46.818248,35.183074
