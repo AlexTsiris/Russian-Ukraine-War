@@ -23072,7 +23072,13 @@ date,type,status,model,oblast,lat,lon
 2026-06-15,Airplanes,Destroyed,Tu-22M3 strategic bomber,"Sklyanka, Bokhan raion",53.136139,103.405306
 2026-06-15,Transport,Destroyed,Ural-4320 fuel tanker,"Dolynske, Melitopol raion",46.818248,35.183074
 2026-06-01,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Ivanivske, Bakhmut raion",48.572603,37.944848
-2026-06-05,Other,Destroyed,'Omich(-2)' multifunctional UGV,"Balka Zhuravka (Nevske), Svatove raion",49.153650,38.030314
+2026-06-05,Other,Destroyed,'Omich(-2)' multifunctional UGV,"Balka Zhuravka (Nevske), Svatove raion",49.15365,38.030314
 2026-06-10,Tanks,Destroyed,T-62*,"Pokrovsk raion, Donetsk oblast",,
 2026-06-12,Transport,Destroyed,Ural-4320,Kursk oblast,,
 2026-06-12,Transport,Destroyed,ZiL-131,"Polohy raion, Zaporizhzhia oblast",,
+2026-06-13,Transport,Destroyed,Ural-4320,"Kramatorsk raion, Donetsk oblast",,
+2026-06-14,Infantry mobility vehicles,Destroyed,AMN-590951 'VPK-Ural',"Romanovka, Krasnaya Yaruga raion",,
+2026-06-15,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Kramatorsk raion, Donetsk oblast",,
+2026-06-17,Transport,Destroyed,KamAZ 6x6,Luhansk oblast,,
+2026-06-17,Transport,Destroyed,KamAZ 6x6,Luhansk oblast,,
+2026-06-17,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Kramatorsk raion, Donetsk oblast",,
