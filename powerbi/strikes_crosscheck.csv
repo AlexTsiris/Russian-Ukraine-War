@@ -1,5 +1,5 @@
 metric,our_value,reference_value,reference_source
-refinery_strike_events,28,150+,Kyiv Independent (Apr 2025): 150+ strikes on refineries
+refinery_strike_events,29,150+,Kyiv Independent (Apr 2025): 150+ strikes on refineries
 distinct_refineries_hit,16,24 of 33,United24 (Jul 2025): 24 of Russia's 33 major refineries hit
-energy_strike_events,53,272,Baker Institute: 272 discrete strikes on energy infrastructure
-total_strategic_strikes,83,120 in 2025,Bloomberg: 120 attacks on Russian energy facilities in 2025
+energy_strike_events,58,272,Baker Institute: 272 discrete strikes on energy infrastructure
+total_strategic_strikes,88,120 in 2025,Bloomberg: 120 attacks on Russian energy facilities in 2025
