@@ -23115,5 +23115,10 @@ date,type,status,model,oblast,lat,lon
 2026-06-22,Anti-aircraft systems,Destroyed,72V6 combat vehicle (for 96K6 'Pantsir-S1'),Zaporizhzhia oblast,,
 2026-06-22,Transport,Destroyed,'Ulan' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.332012,37.458784
 2026-06-23,Transport,Destroyed,ZiL-131,"Novyi Myr, Henichesk raion",46.378084,34.855763
-2026-06-23,Transport,Destroyed,KamAZ-65117,"Chonhar, Henichesk raion",45.987420,34.553633
+2026-06-23,Transport,Destroyed,KamAZ-65117,"Chonhar, Henichesk raion",45.98742,34.553633
 2026-06-23,Drones,Destroyed,Orion UCAV,"Kerch airport, Kerch",45.370047,36.402677
+2026-06-23,Tanks,Destroyed,T-72*,Belgorod oblast,,
+2026-06-23,Transport,Destroyed,KrAZ-255-based vehicle,"Vovchansk, Chuhuiv raion",50.295148,36.939199
+2026-06-24,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',Kursk oblast,,
+2026-06-24,Rocket and missile artillery,Destroyed,220mm 9P140 BM-27 (for 9K57 'Uragan'),"Polohy raion, Zaporizhzhia oblast",,
+2026-06-24,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Kherson raion, Kherson oblast",,
