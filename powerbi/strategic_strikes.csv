@@ -87,3 +87,4 @@ date,target_name,target_type,oblast,lat,lon,geo_precision,status,source_url
 2026-05-24,Vladimir Oblast oil depot,oil_depot,Vladimir Oblast,,,,confirmed,https://kyivindependent.com/ukraine-strikes-major-russian-oil-pumping-station-supplying-moscow-oblast-sbu-says/
 2026-06-03,oil terminal,oil_depot,,,,,confirmed,https://www.kyivpost.com/post/77390
 2026-06-18,Moscow Refinery,refinery,Moscow,55.75,37.62,oblast,confirmed,https://apnews.com/article/russia-ukraine-war-moscow-refinery-attack-oil-0ee97c720e770c392067418f9cabcbba
+2026-06-24,Moscow Oblast energy,energy,Moscow Oblast,55.5,37.4,oblast,confirmed,https://apnews.com/article/russia-ukraine-war-crimea-attacks-6076b6666c3312bbf9b4b8d875a52513
