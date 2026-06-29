@@ -82,9 +82,12 @@ date,target_name,target_type,oblast,lat,lon,geo_precision,status,source_url
 2025-09-28,power station,energy,,,,,claimed,https://kyivindependent.com/ukrainian-himars-reportedly-strike-thermal-power-plant-in-russias-belgorod-oblast/
 2025-10-04,Russia energy,energy,,,,,claimed,https://kyivindependent.com/ukraine-struck-russias-missile-ship-grad-in-karelia-military-says/
 2025-12-22,Russia oil depot,oil_depot,,,,,confirmed,https://it.euronews.com/2025/12/22/lucraina-colpisce-terminale-petrolifero-jet-e-navi-russe-in-unondata-di-attacchi
+2026-02-12,Governor of Volgograd Oblast ammo depot,ammo_depot,Governor of Volgograd Oblast,48.62,44.47,facility,confirmed,https://english.nv.ua/amp/russian-amo-depot-burns-near-volgograd-after-overnight-strike-video-50583143.html
 2026-03-02,oil terminal,oil_depot,Krasnodar Krai,45.07,39.05,facility,confirmed,https://kyivindependent.com/ukrainian-drones-reportedly-strike-novorossiysk-oil-terminal-in-southern-russia/
+2026-05-05,Russia refinery,refinery,,,,,claimed,https://kyivindependent.com/flamingo-missiles-reportedly-hit-russian-shahed-iskander-component-facility-amid-large-scale-attack/
 2026-05-23,oil terminal,oil_depot,Krasnodar Krai,45.07,39.05,facility,confirmed,https://abcnews.com/International/wireStory/ukrainian-drone-attack-triggers-fire-russian-oil-terminal-133246913
 2026-05-24,Vladimir Oblast oil depot,oil_depot,Vladimir Oblast,,,,confirmed,https://kyivindependent.com/ukraine-strikes-major-russian-oil-pumping-station-supplying-moscow-oblast-sbu-says/
 2026-06-03,oil terminal,oil_depot,,,,,confirmed,https://www.kyivpost.com/post/77390
+2026-06-10,Russia refinery,refinery,,,,,claimed,https://censor.net/en/n4007615
 2026-06-18,Moscow Refinery,refinery,Moscow,55.75,37.62,oblast,confirmed,https://apnews.com/article/russia-ukraine-war-moscow-refinery-attack-oil-0ee97c720e770c392067418f9cabcbba
 2026-06-24,Moscow Oblast energy,energy,Moscow Oblast,55.5,37.4,oblast,confirmed,https://apnews.com/article/russia-ukraine-war-crimea-attacks-6076b6666c3312bbf9b4b8d875a52513
