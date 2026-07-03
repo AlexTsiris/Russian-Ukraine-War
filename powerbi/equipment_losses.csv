@@ -23149,18 +23149,44 @@ date,type,status,model,oblast,lat,lon
 2026-06-21,Transport,Damaged,KamAZ 6x6,Kherson oblast,,
 2026-06-27,"Radars, jammers",Damaged,36D6 ST-68U surveillance radar,"Feodosiia, Feodosiia raion",,
 2026-06-29,Transport,Destroyed,KamAZ 6x6 fuel tanker,Crimea,,
-2026-06-08,Infantry mobility vehicles,Destroyed,KamAZ-4386 ZASN-D 'Typhoon-VDV',"Valkovskii, Belgorod raion",50.426370,36.258110
-2026-06-18,Tanks,Destroyed,T-80*,"Preobrazhenka, Pokrovsk raion",48.133940,36.964950
-2026-06-21,Tanks,Destroyed,Unknown tank,"Yablukove, Polohy raion",47.712670,36.316040
-2026-06-21,Infantry fighting vehicles,Destroyed,MT-LB(V),"Novoekonomichne, Pokrovsk raion",48.333700,37.324900
-2026-06-21,Self-propelled artillery,Destroyed,122mm 2S1 'Gvozdika',"Novoekonomichne, Pokrovsk raion",48.333700,37.324900
-2026-06-22,Self-propelled artillery,Destroyed,152mm 2S5 'Giatsint-S',"Olhivske, Polohy raion",47.733420,36.511240
-2026-06-24,Towed artillery,Destroyed,152mm 52-P-546 D-20 gun-howitzer,"Chasiv Yar, Bakhmut raion",48.600340,37.893380
-2026-06-25,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Novoekonomichne, Pokrovsk raion",48.333860,37.331570
-2026-06-26,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Novovasylivka, Pokrovsk raion",48.177370,37.055690
-2026-06-27,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Kolodiazi, Kramatorsk raion",49.119220,37.868390
-2026-06-27,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Makiivka, Svatove raion",49.222680,38.031330
+2026-06-08,Infantry mobility vehicles,Destroyed,KamAZ-4386 ZASN-D 'Typhoon-VDV',"Valkovskii, Belgorod raion",50.42637,36.25811
+2026-06-18,Tanks,Destroyed,T-80*,"Preobrazhenka, Pokrovsk raion",48.13394,36.96495
+2026-06-21,Tanks,Destroyed,Unknown tank,"Yablukove, Polohy raion",47.71267,36.31604
+2026-06-21,Infantry fighting vehicles,Destroyed,MT-LB(V),"Novoekonomichne, Pokrovsk raion",48.3337,37.3249
+2026-06-21,Self-propelled artillery,Destroyed,122mm 2S1 'Gvozdika',"Novoekonomichne, Pokrovsk raion",48.3337,37.3249
+2026-06-22,Self-propelled artillery,Destroyed,152mm 2S5 'Giatsint-S',"Olhivske, Polohy raion",47.73342,36.51124
+2026-06-24,Towed artillery,Destroyed,152mm 52-P-546 D-20 gun-howitzer,"Chasiv Yar, Bakhmut raion",48.60034,37.89338
+2026-06-25,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Novoekonomichne, Pokrovsk raion",48.33386,37.33157
+2026-06-26,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Novovasylivka, Pokrovsk raion",48.17737,37.05569
+2026-06-27,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Kolodiazi, Kramatorsk raion",49.11922,37.86839
+2026-06-27,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Makiivka, Svatove raion",49.22268,38.03133
 2026-06-28,Transport,Destroyed,ZiL-131,"Polohy raion, Zaporizhzhia oblast",,
 2026-06-30,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Svatove raion, Luhansk oblast",,
 2026-06-30,Transport,Destroyed,Ural-4320,Donetsk oblast,,
-2026-06-30,Towed artillery,Destroyed,152mm 2A65 'Msta-B' howitzer,"Novoekonomichne, Pokrovsk raion",48.339970,37.309150
+2026-06-30,Towed artillery,Destroyed,152mm 2A65 'Msta-B' howitzer,"Novoekonomichne, Pokrovsk raion",48.33997,37.30915
+2026-06-03,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Novoekonomichne, Pokrovsk raion",48.340135,37.32542
+2026-06-03,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Novoekonomichne, Pokrovsk raion",48.339993,37.325939
+2026-06-04,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Solntsevka, Belgorod raion",50.285477,36.588139
+2026-06-04,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Lyman Pershyi, Kupiansk raion",49.80858,37.72043
+2026-06-11,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',"Kolomyichykha, Svatove raion",49.42954,38.03343
+2026-06-11,Towed artillery,Destroyed,152mm 2A65 'Msta-B' howitzer,"Ivanivka (Lyman hromada), Kramatorsk raion",49.12288,37.90778
+2026-06-12,Infantry fighting vehicles,Destroyed,BMP-2M 675-sb3KDZ,"Zakitne, Kramatorsk raion",48.891043,37.945994
+2026-06-12,Infantry fighting vehicles,Destroyed,BMP-2 675-sb3KDZ,"Zakitne, Kramatorsk raion",48.89838,37.94667
+2026-06-12,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Torske (Lyman hromada), Kramatorsk raion",48.9807,37.98337
+2026-06-13,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Torske (Lyman hromada), Kramatorsk raion",48.98064,37.99508
+2026-06-13,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Zelena Dolyna, Kramatorsk raion",49.11716,37.80269
+2026-06-14,Infantry fighting vehicles,Destroyed,Unknown IFV,"Vysoke, Polohy raion",47.660457,36.41242
+2026-06-14,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Nove, Kramatorsk raion",49.14474,37.84309
+2026-06-14,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Torske (Lyman hromada), Kramatorsk raion",48.97474,37.96876
+2026-06-15,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Fedorivka, Pokrovsk raion",48.38516,37.29953
+2026-06-16,Tanks,Destroyed,T-72*,"Dronivka, Bakhmut raion",48.9114,38.068262
+2026-06-16,Tanks,Destroyed,Unknown tank,"Dronivka, Bakhmut raion",48.910296,38.067535
+2026-06-16,Self-propelled artillery,Destroyed,152mm 2S5 'Giatsint-S',"Terny, Kramatorsk raion",49.07259,38.00408
+2026-06-16,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Terny, Kramatorsk raion",49.10603,38.02542
+2026-07-01,Transport,Destroyed,UAZ-452,"Kupiansk raion, Kharkiv oblast",,
+2026-07-01,Transport,Destroyed,'Ulan-2' all-terrain vehicle,,,
+2026-07-02,Transport,Destroyed,'Ulan' all-terrain vehicle,"Polohy raion, Zaporizhzhia oblast",,
+2026-07-02,Other,Destroyed,'Omich(-2)' multifunctional UGV,"Kupiansk raion, Kharkiv oblast",,
+2026-07-02,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',"Zaporizhzhia, Pokrovsk raion",48.092768,36.994132
+2026-07-02,Transport,Destroyed,KamAZ 6x6,Kherson oblast,,
+2026-07-02,Infantry fighting vehicles,Destroyed,MT-LB(V),"Sumy raion, Sumy oblast",,
