@@ -23220,3 +23220,7 @@ date,type,status,model,oblast,lat,lon
 2026-07-04,Transport,Destroyed,Ural-4320,"Zapovitne, Vasylivka raion",47.390088,34.622214
 2026-07-04,Transport,Destroyed,KamAZ 6x6,"Vasylivka raion, Zaporizhzhia oblast",,
 2026-07-06,Anti-aircraft systems,Destroyed,51P6 TEL (for 40R6 S-400 'Triumf'),"Kosenki, Mglin raion",53.14548,32.70747
+2026-07-06,Transport,Destroyed,KamAZ 6x6,,,
+2026-07-07,Self-propelled artillery,Destroyed,122mm 2S1 'Gvozdika',Kharkiv oblast,,
+2026-07-07,Transport,Destroyed,Ural-4320-7810 'Motovoz-M',Donetsk oblast,,
+2026-07-07,Engineering,Destroyed,PTS(-M) tracked amphibious transport,"Chuhuiv raion, Kharkiv oblast",,
