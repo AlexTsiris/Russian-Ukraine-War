@@ -23224,6 +23224,25 @@ date,type,status,model,oblast,lat,lon
 2026-07-07,Self-propelled artillery,Destroyed,122mm 2S1 'Gvozdika',Kharkiv oblast,,
 2026-07-07,Transport,Destroyed,Ural-4320-7810 'Motovoz-M',Donetsk oblast,,
 2026-07-07,Engineering,Destroyed,PTS(-M) tracked amphibious transport,"Chuhuiv raion, Kharkiv oblast",,
-2026-07-07,"Radars, jammers",Destroyed,Antenna vehicle (for 1RL131 P-18 'Terek' early warning radar),"Chervone Pole, Berdiansk raion",47.076917,37.079250
+2026-07-07,"Radars, jammers",Destroyed,Antenna vehicle (for 1RL131 P-18 'Terek' early warning radar),"Chervone Pole, Berdiansk raion",47.076917,37.07925
 2026-07-08,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,South Ukraine,,
 2026-07-08,Airplanes,Destroyed,Su-35S multirole aircraft,Luhansk oblast,,
+2026-06-19,Transport,Destroyed,KamAZ 6x6,,,
+2026-07-05,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
+2026-07-05,Other,Destroyed,'Kuryer' mine-laying UGV,"Kramatorsk raion, Donetsk oblast",,
+2026-07-08,Transport,Destroyed,Ural-4320,"Skadovsk raion, Kherson oblast",,
+2026-07-08,Transport,Destroyed,Ural-4320 fuel tanker,"Skadovsk raion, Kherson oblast",,
+2026-07-08,Transport,Destroyed,Ural-4320,"Zaporizhzhia, Pokrovsk raion",48.111677,36.996499
+2026-07-08,Transport,Destroyed,KamAZ 6x6,"Malynivka, Pokrovsk raion",48.328175,37.459626
+2026-07-09,Anti-aircraft systems,Destroyed,KamAZ 6x6 with ZU-23 AA gun,Luhansk oblast,,
+2026-06-21,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
+2026-06-28,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
+2026-07-08,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.327622,37.459951
+2026-07-08,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.326114,37.460825
+2026-07-08,Transport,Destroyed,'Ulan' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.325941,37.460940
+2026-07-08,Transport,Destroyed,ZiL-131,"Malynivka, Pokrovsk raion",48.325516,37.461209
+2026-07-08,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.330041,37.458128
+2026-07-08,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Malynivka, Pokrovsk raion",48.329780,37.458333
+2026-07-08,Transport,Destroyed,'Ulan' all-terrain vehicle,"Malynivka, Pokrovsk raion",48.327870,37.459701
+2026-07-10,Transport,Destroyed,KamAZ 6x6 fuel tanker,"Inzivka, Berdiansk raion",46.732144,36.072569
+2026-07-10,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Kramatorsk raion, Donetsk oblast",,
