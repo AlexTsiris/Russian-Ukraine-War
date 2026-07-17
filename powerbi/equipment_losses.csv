@@ -23330,8 +23330,14 @@ date,type,status,model,oblast,lat,lon
 2026-07-14,Infantry mobility vehicles,Destroyed,KamAZ-53949 'Feniks',"Malynivka, Pokrovsk raion",48.34693,37.462395
 2026-07-14,Vessels,Destroyed,Project 22460 'Okhotnik' patrol ship,"Gelendzhik, Gelendzhik okrug",44.564728,37.993238
 2026-07-14,Transport,Destroyed,'Ulan' all-terrain vehicle,"Polohy raion, Zaporizhzhia oblast",,
-2026-06-23,Towed artillery,Destroyed,Unknown towed artillery,"Kolodiazi, Kramatorsk raion",49.118600,37.867600
-2026-07-06,Tanks,Destroyed,T-62MV Obr. 2022,"Myrnohrad, Pokrovsk raion",48.316200,37.258450
-2026-07-07,Transport,Destroyed,Unknown truck,"Novoekonomichne, Pokrovsk raion",48.331220,37.334940
-2026-07-09,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Chervonopopivka, Siverskodonetsk raion",49.150540,38.124800
+2026-06-23,Towed artillery,Destroyed,Unknown towed artillery,"Kolodiazi, Kramatorsk raion",49.1186,37.8676
+2026-07-06,Tanks,Destroyed,T-62MV Obr. 2022,"Myrnohrad, Pokrovsk raion",48.3162,37.25845
+2026-07-07,Transport,Destroyed,Unknown truck,"Novoekonomichne, Pokrovsk raion",48.33122,37.33494
+2026-07-09,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Chervonopopivka, Siverskodonetsk raion",49.15054,38.1248
 2026-07-14,Rocket and missile artillery,Destroyed,122mm 9P138 (for 9K55 'Grad-1'),"Oleksiivka, Volnovakha raion",48.033074,36.945537
+2026-07-01,Transport,Destroyed,KrAZ-255B,"Novoekonomichne, Pokrovsk raion",48.319640,37.336920
+2026-07-01,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',"Novoekonomichne, Pokrovsk raion",48.317080,37.334450
+2026-07-01,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Soledar, Bakhmut raion",48.720430,38.032800
+2026-07-02,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Novotroitske (Pokrovsk hromada), Pokrovsk raion",48.195890,37.081770
+2026-07-04,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Torske (Lyman hromada), Kramatorsk raion",48.987960,38.000510
+2026-07-15,Tanks,Destroyed,T-62 Obr. 1972,"Pokrovsk raion, Donetsk oblast",,
