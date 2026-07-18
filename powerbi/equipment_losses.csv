@@ -23335,9 +23335,14 @@ date,type,status,model,oblast,lat,lon
 2026-07-07,Transport,Destroyed,Unknown truck,"Novoekonomichne, Pokrovsk raion",48.33122,37.33494
 2026-07-09,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Chervonopopivka, Siverskodonetsk raion",49.15054,38.1248
 2026-07-14,Rocket and missile artillery,Destroyed,122mm 9P138 (for 9K55 'Grad-1'),"Oleksiivka, Volnovakha raion",48.033074,36.945537
-2026-07-01,Transport,Destroyed,KrAZ-255B,"Novoekonomichne, Pokrovsk raion",48.319640,37.336920
-2026-07-01,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',"Novoekonomichne, Pokrovsk raion",48.317080,37.334450
-2026-07-01,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Soledar, Bakhmut raion",48.720430,38.032800
-2026-07-02,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Novotroitske (Pokrovsk hromada), Pokrovsk raion",48.195890,37.081770
-2026-07-04,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Torske (Lyman hromada), Kramatorsk raion",48.987960,38.000510
+2026-07-01,Transport,Destroyed,KrAZ-255B,"Novoekonomichne, Pokrovsk raion",48.31964,37.33692
+2026-07-01,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',"Novoekonomichne, Pokrovsk raion",48.31708,37.33445
+2026-07-01,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Soledar, Bakhmut raion",48.72043,38.0328
+2026-07-02,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Novotroitske (Pokrovsk hromada), Pokrovsk raion",48.19589,37.08177
+2026-07-04,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Torske (Lyman hromada), Kramatorsk raion",48.98796,38.00051
 2026-07-15,Tanks,Destroyed,T-62 Obr. 1972,"Pokrovsk raion, Donetsk oblast",,
+2026-06-21,Transport,Destroyed,KamAZ 6x6,South Ukraine,,
+2026-06-24,Transport,Destroyed,'Ulan' all-terrain vehicle,Donetsk oblast,,
+2026-07-15,Transport,Destroyed,KamAZ 6x6,"Kramatorsk raion, Donetsk oblast",,
+2026-07-16,Transport,Destroyed,KamAZ 6x6,Zaporizhzhia oblast,,
+2026-07-16,Transport,Destroyed,KamAZ 6x6,Zaporizhzhia oblast,,
