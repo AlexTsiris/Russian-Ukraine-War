@@ -2080,7 +2080,7 @@ date,type,status,model,oblast,lat,lon
 2022-03-30,Transport,Destroyed,GAZ-3344-20 'Aleut' articulated tracked carrier,"Rudnia-Sydorivska, Vyshhorod raion",50.965203,29.578776
 2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),"Dmytrivka (Dmytrivka hromada), Bucha raion",50.46437,30.18227
 2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),East Ukraine,,
-2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),"Kopyliv, Bucha raion",50.41881410305166,29.859710214043997
+2022-03-30,Infantry fighting vehicles,Destroyed,BMP-2(K),"Kopyliv, Bucha raion",50.41881410305166,29.859710214044
 2022-03-30,Infantry fighting vehicles,Captured,BMP-2D,"Mala Shestirnia, Beryslav raion",47.55643,33.56099
 2022-03-30,Infantry fighting vehicles,Destroyed,BMD-2,"Irpin, Bucha raion",50.51837,30.20017
 2022-03-30,Infantry fighting vehicles,Destroyed,BTR-82A(M),"Velyka Novosilka, Volnovakha raion",47.817462,36.90363
@@ -2121,7 +2121,7 @@ date,type,status,model,oblast,lat,lon
 2022-03-31,Tanks,Destroyed,T-72B,"Nova Basan, Nizhyn raion",50.5697515,31.5146126
 2022-03-31,Tanks,Destroyed,T-72B,"Sukha Kamianka, Izium raion",49.088358,37.318721
 2022-03-31,Tanks,Destroyed,T-72B,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.46439,30.18241
-2022-03-31,Tanks,Destroyed,T-72B,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.45417819703755,30.176280123300916
+2022-03-31,Tanks,Destroyed,T-72B,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.45417819703755,30.17628012330092
 2022-03-31,Tanks,Captured,T-72B,"Bobryk, Brovary raion",50.64307,31.14858
 2022-03-31,Tanks,Destroyed,T-72B Obr. 1989,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.46427,30.18218
 2022-03-31,Tanks,Captured,T-72B Obr. 1989,"Dmytrivka (Dmytrivka hromada), Bucha raion",50.45512,30.17904
@@ -2250,7 +2250,7 @@ date,type,status,model,oblast,lat,lon
 2022-03-31,Tanks,Captured,T-72B3 Obr. 2016,"Romny raion, Sumy oblast",,
 2022-03-31,Infantry fighting vehicles,Captured,BMP-2(K),Sumy oblast,,
 2022-03-31,Engineering,Captured,IMR-2(M) combat engineering vehicle,Sumy oblast,,
-2022-03-31,Engineering,Destroyed,TMM-3 bridge layer,"Sloboda-Kukharska, Vyshhorod raion",50.849101537191366,29.546632755553517
+2022-03-31,Engineering,Destroyed,TMM-3 bridge layer,"Sloboda-Kukharska, Vyshhorod raion",50.849101537191366,29.54663275555352
 2022-03-31,Transport,Destroyed,Ural-4320,"Hrezlia, Korosten raion",51.334679,29.272189
 2022-03-31,"Radars, jammers",Destroyed,R-330BMV jamming station (for RB-301B 'Borisoglebsk-2'),"Motyzhyn, Bucha raion",50.3897,29.97518
 2022-03-31,"Radars, jammers",Destroyed,R-934B 'Sinitsa' automated electronic warfare station,"Motyzhyn, Bucha raion",50.3896,29.97511
@@ -23361,3 +23361,10 @@ date,type,status,model,oblast,lat,lon
 2026-07-16,Transport,Destroyed,KamAZ 6x6,Zaporizhzhia oblast,,
 2026-07-18,Other,Damaged,'Omich(-2)' multifunctional UGV,"Serebrianka reserve, Siverskodonetsk raion",,
 2026-07-16,Airplanes,Destroyed,Tu-95MS strategic bomber,"Engels-2 airbase, Engels raion",51.484034,46.211824
+2026-07-17,Transport,Destroyed,'Ulan-2' all-terrain vehicle,Kursk oblast,,
+2026-07-17,Drones,Captured,'Orlan-10' reconnaissance UAV,,,
+2026-07-19,Self-propelled artillery,Destroyed,122mm 2S1 'Gvozdika',Kursk oblast,,
+2026-07-20,Anti-aircraft systems,Destroyed,9A331M TLAR (for 9K332 'Tor-M2'),"Beregovoy, Yeysk raion",46.682171,38.117693
+2026-07-20,Transport,Destroyed,KamAZ 6x6,Zaporizhzhia oblast,,
+2026-07-20,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Vtoroy Knyazhiy, Sudzha raion",51.222439,35.239730
+2026-07-20,Other,Damaged,'Omich(-2)' multifunctional UGV,"Kramatorsk raion, Donetsk oblast",,
