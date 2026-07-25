@@ -23387,3 +23387,7 @@ date,type,status,model,oblast,lat,lon
 2026-07-23,Transport,Destroyed,KamAZ 6x6,"Ilovaisk, Donetsk raion",,
 2026-07-23,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
 2026-07-23,Transport,Destroyed,'Ulan' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
+2026-07-22,Tanks,Destroyed,T-72B3A,"Maiak, Pokrovsk raion",,
+2026-07-22,Transport,Destroyed,Ural-4320,Belgorod oblast,,
+2026-07-24,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Nova Poltavka, Kramatorsk raion",48.375610,37.481352
+2026-07-24,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Kramatorsk raion, Donetsk oblast",,
