@@ -23414,3 +23414,8 @@ date,type,status,model,oblast,lat,lon
 2026-07-28,Infantry mobility vehicles,Destroyed,GAZ-233014 'Tigr',,,
 2026-07-30,Anti-aircraft systems,Destroyed,9A316 TEL (for 9K317 'Buk-M2'),,,
 2026-07-30,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,,,
+2026-07-13,Towed artillery,Destroyed,152mm 2A36 'Giatsint-B' field gun,"Kramatorsk raion, Donetsk oblast",,
+2026-07-30,Self-propelled artillery,Destroyed,152mm 2S44 'Giatsint-K',"Tavilzhanka, Kupiansk raion",49.842880,37.746585
+2026-07-30,Transport,Destroyed,KamAZ 6x6,"Shevchenka, Berdiansk raion",46.788859,36.578544
+2026-07-31,Engineering,Destroyed,REM-KL recovery vehicle,"Holubivka (Alchevsk hromada), Alchevsk raion",48.375571,38.533925
+2026-07-31,Transport,Destroyed,KamAZ 6x6,"Holubivka (Alchevsk hromada), Alchevsk raion",48.375583,38.533917
