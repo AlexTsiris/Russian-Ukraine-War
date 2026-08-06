@@ -23458,3 +23458,8 @@ date,type,status,model,oblast,lat,lon
 2026-08-03,Towed artillery,Destroyed,Unknown towed artillery,"Kherson raion, Kherson oblast",,
 2026-08-04,Transport,Destroyed,ZiL-131,"Polohy raion, Zaporizhzhia oblast",,
 2026-08-04,Infantry mobility vehicles,Destroyed,ASN-233115 'Tigr-M SpN',"Kramatorsk raion, Donetsk oblast",,
+2026-07-20,"Radars, jammers",Damaged,1L119 'Nebo-SVU' multi-functional radar,"Yeysk airbase, Yeysk",46.685697,38.231491
+2026-08-03,Transport,Destroyed,KrAZ-260,"Polohy raion, Zaporizhzhia oblast",,
+2026-08-03,Drones,Captured,Supercam S350 reconnaissance UAV,,,
+2026-08-04,Transport,Destroyed,ZiL-131,"Khromivka, Bakhmut raion",48.726864,37.945267
+2026-08-04,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',"Lyman Pershyi, Kupiansk raion",,
