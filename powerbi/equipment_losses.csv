@@ -23464,3 +23464,7 @@ date,type,status,model,oblast,lat,lon
 2026-08-04,Transport,Destroyed,ZiL-131,"Khromivka, Bakhmut raion",48.726864,37.945267
 2026-08-04,Self-propelled artillery,Destroyed,152mm 2S19 'Msta-S',"Lyman Pershyi, Kupiansk raion",,
 2026-07-27,Transport,Destroyed,KamAZ 6x6,,,
+2026-07-18,Other,Destroyed,'Kuryer' logistics UGV,,,
+2026-08-06,Other,Destroyed,'Impuls-M' universal tracked platform,"Vovchansk, Chuhuiv raion",50.300417,36.911732
+2026-08-07,Transport,Destroyed,UAZ Patriot jeep,"Kherson raion, Kherson oblast",,
+2026-08-07,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),Kursk oblast,,
