@@ -91,3 +91,5 @@ date,target_name,target_type,oblast,lat,lon,geo_precision,status,source_url
 2026-06-10,Russia refinery,refinery,,,,,claimed,https://censor.net/en/n4007615
 2026-06-18,Moscow Refinery,refinery,Moscow,55.75,37.62,oblast,confirmed,https://apnews.com/article/russia-ukraine-war-moscow-refinery-attack-oil-0ee97c720e770c392067418f9cabcbba
 2026-06-24,Moscow Oblast energy,energy,Moscow Oblast,55.5,37.4,oblast,confirmed,https://apnews.com/article/russia-ukraine-war-crimea-attacks-6076b6666c3312bbf9b4b8d875a52513
+2026-08-10,Tatarstan refinery,refinery,Tatarstan,55.4,50.9,oblast,confirmed,https://www.reuters.com/world/europe/ukraine-kills-12-drone-strikes-russian-city-nizhnekamsk-state-media-reports-2026-08-10/
+2026-08-15,Russia oil depot,oil_depot,,,,,claimed,https://apnews.com/article/66f000409c6648239936b628a9eae0f5
