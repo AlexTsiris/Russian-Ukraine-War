@@ -23516,3 +23516,6 @@ date,type,status,model,oblast,lat,lon
 2026-08-16,Tanks,Destroyed,T-72B3 Obr. 2025,"Kramatorsk raion, Donetsk oblast",,
 2026-08-07,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,Zaporizhzhia oblast,,
 2026-08-07,Towed artillery,Damaged,122mm 2A18 D-30 howitzer,Zaporizhzhia oblast,,
+2026-08-11,Self-propelled artillery,Destroyed,203mm 2S7(M) 'Pion'/'Malka',"Novoocheretuvate, Volnovakha raion",47.908114,36.825166
+2026-08-18,Drones,Captured,ZALA Z-16 (421-16Е) reconnaissance UAV,,,
+2026-08-18,Transport,Destroyed,KamAZ 6x6,"Luhanske, Bakhmut raion",,
