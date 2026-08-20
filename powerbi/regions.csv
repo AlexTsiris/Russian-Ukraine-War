@@ -1,6 +1,7 @@
 ﻿region_en,region_ru,settlements,total_deaths_full
 Bashkortostan,Республика Башкортостан,1733,10044
 Tatarstan,Республика Татарстан,1320,8214
+Sverdlovsk Oblast,Свердловская область,531,7542
 Chelyabinsk Oblast,Челябинская область,564,7026
 Krasnodar Krai,Краснодарский край,696,6763
 Perm Krai,Пермский край,771,6469
@@ -11,6 +12,7 @@ Krasnoyarsk Krai,Красноярский край,608,5347
 Saratov Oblast,Саратовская область,655,5032
 Kemerovo Oblast,Кемеровская область,350,5002
 Buryatia,Республика Бурятия,430,4927
+Altai Krai,Алтайский край,729,4608
 Zabaykalsky Krai,Забайкальский край,436,4528
 Volgograd Oblast,Волгоградская область,553,4379
 Novosibirsk Oblast,Новосибирская область,526,4176
@@ -18,11 +20,15 @@ Orenburg Oblast,Оренбургская область,661,4152
 Primorsky Krai,Приморский край,303,4150
 Samara Oblast,Самарская область,456,4117
 Moscow,Москва,15,3703
+Omsk Oblast,Омская область,552,3618
 Udmurtia,Удмуртская Республика,481,3482
+Stavropol Krai,Ставропольский край,363,3481
 Nizhny Novgorod Oblast,Нижегородская область,516,3475
+Kirov Oblast,Кировская область,520,3274
 Voronezh Oblast,Воронежская область,520,3012
 Sakha (Yakutia),Республика Саха (Якутия),325,2793
 Tyumen Oblast,Тюменская область,403,2555
+Khanty-Mansi AO – Yugra,Ханты-Мансийский автономный округ - Югра,118,2467
 Ulyanovsk Oblast,Ульяновская область,366,2444
 Saint Petersburg,Санкт-Петербург,20,2374
 Penza Oblast,Пензенская область,344,2365
@@ -31,23 +37,33 @@ Belgorod Oblast,Белгородская область,393,2208
 Dagestan,Республика Дагестан,512,2200
 Tomsk Oblast,Томская область,243,2132
 Kurgan Oblast,Курганская область,361,2091
+Komi,Республика Коми,245,2056
 Khabarovsk Krai,Хабаровский край,183,2030
 Vologda Oblast,Вологодская область,363,1930
+Bryansk Oblast,Брянская область,364,1911
 Tver Oblast,Тверская область,377,1900
 Astrakhan Oblast,Астраханская область,215,1880
 Chuvashia,Чувашская Республика,455,1873
 Crimea,Республика Крым,364,1840
+Amur Oblast,Амурская область,247,1826
 Tuva,Республика Тыва,119,1761
+Leningrad Oblast,Ленинградская область,319,1733
+Vladimir Oblast,Владимирская область,245,1703
 Tambov Oblast,Тамбовская область,311,1565
 Mari El,Республика Марий Эл,327,1546
 Ivanovo Oblast,Ивановская область,176,1545
 Kaliningrad Oblast,Калининградская область,188,1532
 Lipetsk Oblast,Липецкая область,311,1466
+Khakassia,Республика Хакасия,161,1448
+Kursk Oblast,Курская область,363,1412
 Tula Oblast,Тульская область,164,1402
 North Ossetia-Alania,Республика Северная Осетия-Алания,90,1366
+Karelia,Республика Карелия,165,1354
+Sakhalin Oblast,Сахалинская область,95,1324
 Kaluga Oblast,Калужская область,203,1270
 Yaroslavl Oblast,Ярославская область,182,1254
 Mordovia,Республика Мордовия,252,1179
+Kostroma Oblast,Костромская область,179,1127
 Yamalo-Nenets AO,Ямало-Ненецкий автономный округ,53,1123
 Ryazan Oblast,Рязанская область,228,1112
 Pskov Oblast,Псковская область,212,1108
@@ -56,10 +72,18 @@ Donetsk PR (occupied),ДНР,76,1061
 Novgorod Oblast,Новгородская область,201,1051
 Smolensk Oblast,Смоленская область,204,1039
 Oryol Oblast,Орловская область,251,989
+Altai Republic,Республика Алтай,148,876
+Kamchatka Krai,Камчатский край,58,855
+Luhansk PR (occupied),ЛНР,90,733
 Kabardino-Balkaria,Кабардино-Балкарская Республика,94,662
+Sevastopol,Севастополь,7,593
+Kalmykia,Республика Калмыкия,88,558
+Adygea,Республика Адыгея,84,513
 Karachay-Cherkessia,Республика Карачаево-Черкесия,87,451
 Chechnya,Чеченская Республика,106,448
 Magadan Oblast,Магаданская область,27,432
+Jewish AO,Еврейская автономная область,55,366
+Chukotka AO,Чукотский автономный округ,33,270
 Ingushetia,Республика Ингушетия,32,187
 Nenets AO,Ненецкий автономный округ,19,128
 Baikonur,Байконур,1,4
