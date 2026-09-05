@@ -1,14 +1,14 @@
 type,destroyed,damaged,abandoned,captured,total
 Infantry fighting vehicles,7267,433,170,958,8828
-Transport,3938,142,8,567,4655
-Tanks,3127,330,108,521,4086
+Transport,3940,142,8,567,4657
+Tanks,3129,330,108,521,4088
 Self-propelled artillery,867,55,1,102,1025
 Drones,454,1,0,387,842
 Engineering,447,57,14,151,669
-Rocket and missile artillery,508,52,0,48,608
+Rocket and missile artillery,509,52,0,48,609
 Infantry mobility vehicles,484,35,6,64,589
 Anti-aircraft systems,420,92,0,62,574
-Towed artillery,335,92,0,97,524
+Towed artillery,337,92,0,97,526
 "Command posts, communication",261,6,2,126,395
 "Radars, jammers",129,59,0,15,203
 Other,164,9,0,10,183

@@ -23602,6 +23602,13 @@ date,type,status,model,oblast,lat,lon
 2026-08-31,Other,Destroyed,'Impuls-M' Obr. 2026 universal tracked platform,"Kupiansk raion, Kharkiv oblast",,
 2026-08-23,Transport,Destroyed,KamAZ 8x8 fuel tanker,"Novoivanivka, Melitopol raion",46.778908,35.560109
 2026-09-02,Transport,Destroyed,KamAZ 6x6,,,
-2026-09-03,Self-propelled artillery,Destroyed,152mm 2S43 'Malva',"Shirokii, Belgorod raion",50.484194,36.293750
+2026-09-03,Self-propelled artillery,Destroyed,152mm 2S43 'Malva',"Shirokii, Belgorod raion",50.484194,36.29375
 2026-09-03,Anti-aircraft systems,Destroyed,9A316 TEL (for 9K317 'Buk-M2'),"Siverskodonetsk raion, Luhansk oblast",,
 2026-09-03,Transport,Destroyed,'Ulan-2' all-terrain vehicle,South Ukraine,,
+2026-08-19,Towed artillery,Destroyed,152mm 2A65 'Msta-B' howitzer,"Siverskodonetsk raion, Luhansk oblast",,
+2026-08-19,Towed artillery,Destroyed,130mm 52-P-482 M-46 field gun,"Siverskodonetsk raion, Luhansk oblast",,
+2026-08-31,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Bakhmut raion, Donetsk oblast",,
+2026-09-04,Tanks,Destroyed,T-90M 'Proryv',,,
+2026-09-04,Tanks,Destroyed,T-72B3 Obr. 2022,"Kolodiazi, Kramatorsk raion",49.102648,37.915385
+2026-09-04,Transport,Destroyed,Ural-4320,Belgorod oblast,,
+2026-09-04,Transport,Destroyed,KamAZ 6x6,"Demianivka, Mariupol raion",47.051417,37.117667
