@@ -23630,11 +23630,14 @@ date,type,status,model,oblast,lat,lon
 2026-09-07,Airplanes,Destroyed,Su-35S multirole aircraft,Kursk oblast,,
 2026-08-19,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
 2026-08-23,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
-2026-09-02,Anti-aircraft systems,Damaged,9A316 TEL (for 9K317 'Buk-M2'),"Baranykivka, Svatove raion",49.245280,38.355740
+2026-09-02,Anti-aircraft systems,Damaged,9A316 TEL (for 9K317 'Buk-M2'),"Baranykivka, Svatove raion",49.24528,38.35574
 2026-09-03,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
 2026-09-05,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
 2026-09-05,Transport,Destroyed,'Ulan' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
-2026-09-07,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Byakhovo, Korenevo raion",51.266600,34.889770
+2026-09-07,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Byakhovo, Korenevo raion",51.2666,34.88977
 2026-09-07,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Pokrovsk raion, Donetsk oblast",,
 2026-09-08,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Pokrovsk raion, Donetsk oblast",,
-2026-09-08,Infantry fighting vehicles,Destroyed,BMP-2(K),"Terny, Kramatorsk raion",49.134156,38.082890
+2026-09-08,Infantry fighting vehicles,Destroyed,BMP-2(K),"Terny, Kramatorsk raion",49.134156,38.08289
+2026-08-31,Anti-aircraft systems,Destroyed,72V6 combat vehicle (for 96K6 'Pantsir-S1'),"Chaltyr, Myasnikov raion",,
+2026-08-31,Anti-aircraft systems,Destroyed,72V6 combat vehicle (for 96K6 'Pantsir-S1'),"Saint Petersburg, Leningrad oblast",,
+2026-09-08,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),Kursk oblast,,
