@@ -23670,7 +23670,7 @@ date,type,status,model,oblast,lat,lon
 2026-09-04,Transport,Destroyed,ZiL-131,"Polohy raion, Zaporizhzhia oblast",,
 2026-09-09,Transport,Destroyed,Ural-4320-7810 'Motovoz-M',,,
 2026-09-12,Transport,Destroyed,ZiL-131,"Polohy raion, Zaporizhzhia oblast",,
-2026-09-13,Transport,Destroyed,Ural-4320,"Siabry, Skadovsk raion",46.108453,32.652330
+2026-09-13,Transport,Destroyed,Ural-4320,"Siabry, Skadovsk raion",46.108453,32.65233
 2026-09-13,Self-propelled artillery,Destroyed,152mm 2S19(M1) 'Msta-S',"Pokrovsk raion, Donetsk oblast",,
 2026-09-13,Self-propelled artillery,Destroyed,152mm 2S5 'Giatsint-S',"Pokrovsk raion, Donetsk oblast",,
 2026-09-13,Transport,Destroyed,'Ulan-2' all-terrain vehicle,"Kupiansk raion, Kharkiv oblast",,
@@ -23680,3 +23680,5 @@ date,type,status,model,oblast,lat,lon
 2026-09-14,Towed artillery,Destroyed,122mm 2A18 D-30 howitzer,"Kherson raion, Kherson oblast",,
 2026-09-15,Transport,Destroyed,KamAZ 6x6,South Ukraine,,
 2026-09-15,Towed artillery,Destroyed,152mm 2A65 'Msta-B' howitzer,Belgorod oblast,,
+2026-09-11,Engineering,Destroyed,BREM-L 'Beglyanka' armoured recovery vehicle,Donetsk oblast,,
+2026-09-16,Infantry fighting vehicles,Destroyed,BTR-80 or -82,Kursk oblast,,
