@@ -23720,10 +23720,12 @@ date,type,status,model,oblast,lat,lon
 2026-09-22,Transport,Destroyed,'Ulan' all-terrain vehicle,"Myrnohrad, Pokrovsk raion",,
 2026-09-22,Tanks,Destroyed,T-80BV,Kursk oblast,,
 2026-09-25,Infantry fighting vehicles,Destroyed,BMP-2M 675-sb3KDZ,"Terny, Kramatorsk raion",49.11313,37.99709
-2026-08-30,Airplanes,Destroyed,L-39 Albatros,"Yeysk airbase, Yeysk",46.680370,38.210510
+2026-08-30,Airplanes,Destroyed,L-39 Albatros,"Yeysk airbase, Yeysk",46.68037,38.21051
 2026-09-24,Infantry fighting vehicles,Destroyed,MT-LB(V),"Novoekonomichne, Pokrovsk raion",48.325482,37.332857
 2026-09-26,Transport,Destroyed,KamAZ 6x6 with armoured cabin,"Melitopol raion, Zaporizhzhia oblast",,
 2026-09-26,Transport,Destroyed,KamAZ 6x6 fuel tanker,"Melitopol raion, Zaporizhzhia oblast",,
 2026-09-27,Infantry fighting vehicles,Destroyed,MT-LB(V),"Ivanivske, Bakhmut raion",48.583616,37.922088
 2026-09-27,Infantry fighting vehicles,Destroyed,BMP-1 or -2,"Ivanivske, Bakhmut raion",48.583616,37.922088
 2026-09-27,Rocket and missile artillery,Destroyed,122mm 2B17 BM-21-1 (for 9K51 'Grad'),"Bakhmut raion, Donetsk oblast",,
+2026-09-29,Airplanes,Destroyed,Tu-95MS strategic bomber,"Krasnoyarovo, Mazanovo raion",,
+2026-09-29,Tanks,Destroyed,T-54 or -55,"Stepanivka, Polohy raion",47.632476,36.417136
